@@ -11,6 +11,7 @@ const Hero = () => {
         is a network of young people driving
         <br /> dialogue, action and change.
       </h3>
+      <a  className={heroStyles.joinBtn} target="_blank" href="https://google.com">Join</a>
     </div>
   )
 }
