@@ -8,7 +8,6 @@
 //   }
 
 .header {
-  
   min-height: calc(100vh - 140px);
   background-image: linear-gradient(
       rgba(217, 234, 245, 0.7),
@@ -19,104 +18,90 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-   border-top: 9px solid #b9dff8; 
-  
+  border-top: 9px solid #b9dff8;
 }
 
-
-
-.heroDiv{
+.heroDiv {
   margin: 4%;
-  height:60vh;
-  display:flex;
+  height: 60vh;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
-  
 }
 
 .pageHeadingPrimary {
   display: block;
-    font-size: 3.125rem;
-   font-weight: 300;
-  color:#044b91;
-  font-family: "Montserrat";
-  
+  font-size: 3.125rem;
+  font-weight: 300;
+  color: #044b91;
+  font-family: 'Montserrat';
+
   // position: absolute;
   // top: 10%;
   // left: 10%;
 }
 
-
 .pageHeadingSecondary {
   display: block;
   font-size: 1.5rem;
   font-weight: 200;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
 
 .joinBtn {
-  
   background: #043770;
-   border-radius: 50px;
+  border-radius: 50px;
   padding: 10px 35px;
   text-decoration: none;
-  color:#CBD6E2;
+  color: #cbd6e2;
   max-width: 180px;
   margin-bottom: 3rem;
   text-align: center;
-  
 }
 .bodyContainer {
-  
-  margin:6rem auto;
-
-  
-  
+  margin: 6rem auto;
 }
-.bodyH1{
+.bodyH1 {
   font-weight: 300;
-  color:#044b91;
+  color: #044b91;
   text-align: center;
   font-size: 3.125rem;
   margin-bottom: 3%;
-  font-family: "Montserrat";
-
+  font-family: 'Montserrat';
 }
-.bodyPara{
+.bodyPara {
   color: #212934;
   text-align: center;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-size: 1.2rem;
-   width: 80vw;
-   margin:0 auto 9% auto ;
+  width: 80vw;
+  margin: 0 auto 9% auto;
 }
 
-.bodyIconsSection{
-  
-  width:  80vw;
-  margin:auto; 
-  display:flex;
-  flex-flow: row wrap;
-   justify-content: space-between; 
+.bodyIconsSection {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .bodyIconWrapper {
- 
- width: 20vw;
-  height:100%;
+  // width: 10vw;
+  height: 100%;
   text-align: center;
+  flex: 0 1 calc(12vw + 90px);
+  margin: 30px;
 }
-.bodyIconImg{
-  width:100%;
-  height:100%;
+.bodyIconImg {
+  width: 40%;
+  height: 100%;
 }
 
-.bodyIconText{
-  
-  width:100%;
-  font-size: 1rem;
+.bodyIconText {
+  font-size: 1.5rem;
   font-weight: bold;
-  color:#044b91;
-  margin-top:4%;
-
+  color: #044b91;
+  margin-top: 10%;
+  text-align: center;
 }

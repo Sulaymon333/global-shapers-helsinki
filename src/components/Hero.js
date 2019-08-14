@@ -1,6 +1,8 @@
-import React from "react"
-import heroStyles from "./hero.module.scss"
-import clock from "../assets/time.png"
+import React from 'react'
+import heroStyles from './hero.module.scss'
+import team from '../assets/icons/team.svg'
+import time from '../assets/icons/time.svg'
+import project from '../assets/icons/project.svg'
 
 const Hero = () => {
   return (
@@ -12,7 +14,8 @@ const Hero = () => {
           </h1>
           <h3 className={heroStyles.pageHeadingSecondary}>
             is a network of young people driving
-            <br /> dialogue, action and change.
+            <br />
+            dialogue, action and change.
           </h3>
           <a
             className={heroStyles.joinBtn}
@@ -29,28 +32,32 @@ const Hero = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque hic
           minima omnis dolorem est excepturi cum ipsum eos mollitia
           necessitatibu consectetur adipisicing elit. Eaque hic minima omnis
-          dolorem est excepturi cum ipsum eos mollitia necessitatibu. Lorem
-          ipsum dolor sit, amet consectetur adipisicing elit. Eaque hic minima
-          omnis dolorem est excepturi cum ipsum eos mollitia necessitatibu
-          consectetur adipisicing elit. Eaque hic minima omnis dolorem est
-          excepturi cum ipsum eos mollitia necessitatibuLorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Eaque hic minima omnis dolorem est
-          excepturi cum ipsum eos mollitia necessitatibu consectetur adipisicing
-          elit. Eaque hic minima omnis dolorem est excepturi cum ipsum eos
-          mollitia necessitatibu.
+          dolorem est excepturi cum ipsum eos mollitia necessitatibu
         </p>
         <h1 className={heroStyles.bodyH1}>GSH in numbers</h1>
         <div className={heroStyles.bodyIconsSection}>
           <div className={heroStyles.bodyIconWrapper}>
-            <img className={heroStyles.bodyIconImg} src={clock} alt="Logo" />
+            <img
+              className={heroStyles.bodyIconImg}
+              src={team}
+              alt="team icon"
+            />
             <p className={heroStyles.bodyIconText}>20 Shapers</p>
           </div>
           <div className={heroStyles.bodyIconWrapper}>
-            <img className={heroStyles.bodyIconImg} src={clock} alt="Logo" />
+            <img
+              className={heroStyles.bodyIconImg}
+              src={time}
+              alt="time icon"
+            />
             <p className={heroStyles.bodyIconText}>1000hrs Spent</p>
           </div>
           <div className={heroStyles.bodyIconWrapper}>
-            <img className={heroStyles.bodyIconImg} src={clock} alt="Logo" />
+            <img
+              className={heroStyles.bodyIconImg}
+              src={project}
+              alt="Project icon"
+            />
             <p className={heroStyles.bodyIconText}>10 Projects completed</p>
           </div>
         </div>
