@@ -27,11 +27,6 @@ const Header = () => {
               Join
             </Link>
           </li>
-          <li>
-            <Link className={headerStyles.navItem} to="#">
-              Apply
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>

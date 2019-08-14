@@ -8,6 +8,7 @@
 //   }
 
 .header {
+  border: 1px solid red;
   min-height: calc(100vh - 140px);
   background-image: linear-gradient(
       rgba(217, 234, 245, 0.7),
@@ -15,9 +16,12 @@
     ),
     url(https://scontent-hel2-1.xx.fbcdn.net/v/t1.0-9/48078921_2285773721702746_3205962000043606016_o.jpg?_nc_cat=101&_nc_oc=AQkblN0IS-0K1dEby_P9sCIqWIZ_kyBXFXaLjMJDpjSjF--ky0mKNPppFqYpKzp8G_9lXNuQU4upsvZYPjU4PaDn&_nc_ht=scontent-hel2-1.xx&oh=c0d1267e65115648be3619eea3ac75b6&oe=5DE03CD5);
   background-size: cover;
-  background-position: top;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
-  border-top: 11px solid #b9dff8;
+  border-top: 9px solid #b9dff8;
+
+  
 }
 
 .pageHeading {
@@ -29,24 +33,36 @@
   white-space: nowrap;
 }
 
+.heroDiv{
+  
+  margin: 4%;
+  height:60vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .pageHeadingPrimary {
   display: block;
   font-size: 3.125rem;
   font-weight: 300;
-  color: #3498db;
-  width: 80%;
+  color:#044b91;
+  width: 80%; 
   font-family: "Montserrat";
 }
 
 .pageHeadingSecondary {
   display: block;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 200;
+  margin-top:5%;
 }
 
 .joinBtn {
-  background: blue;
+  background: #043770;
   border-radius: 50px;
-  padding: 20px 40px;
+  padding: 10px 35px;
   text-decoration: none;
+  color:#CBD6E2;
+  max-width: 150px;
 }
