@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby' // for adding link from the other internal pages so it would not load again whole page
+import footerStyles from './footer.module.scss' //conect styles
+
+/* import { Link } from 'gatsby' // for adding link from the other internal pages so it would not load again whole page */
 
 /*Icons*/
 
@@ -9,8 +11,6 @@ import instagram from '../assets/social-icons/instagram.svg'
 import linkedIn from '../assets/social-icons/linkedin.svg'
 import twitter from '../assets/social-icons/medium.svg'
 // import youTube from '../assets/social-icons/youTube' // IMPORTANT! I dont have icon still
-
-import footerStyles from './footer.scss' //conect styles
 
 const Footer = () => {
   return (
