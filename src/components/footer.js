@@ -14,30 +14,31 @@ import footerStyles from './footer.scss' //conect styles
 
 const Footer = () => {
   return (
-    <div>
-      <p>This is the Footer component</p>
-      <div className={footerStyles.socialMedia}>
-        <p>
+    <footer className={footerStyles.footerContainer}>
+      <div className={footerStyles.socialMediaContainer}>
+        <p className={footerStyles.socialIconsImg}>
           <a href="https://www.facebook.com/ShapersHel/">facebook</a>
         </p>
 
-        <p>
+        <p className={footerStyles.socialIcons}>
           <a href="https://twitter.com/globalshapers">twitter</a>
         </p>
 
-        <p>
+        <p className={footerStyles.socialIcons}>
           <a href="https://www.instagram.com/shapershel/">instagram</a>
         </p>
 
-        <p>
-          <a href="https://www.linkedin.com/company/shapershel/">linkedIn</a>
+        <p className={footerStyles.socialIcons}>
+          <a href="https://www.linkedin.com/company/shapershel/">linkedIn </a>
         </p>
 
-        <p>
+        <p className={footerStyles.socialIcons}>
           <a href="https://www.youtube.com/globalshapers">youTube</a>
         </p>
       </div>
-    </div>
+
+      <p className={footerStyles.credits}>Created by Integrify 2019 </p>
+    </footer>
   )
 }
 

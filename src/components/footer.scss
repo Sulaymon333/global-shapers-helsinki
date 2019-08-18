@@ -1,4 +1,20 @@
-.imgLogo {
-    margin-left: 4rem;
-    width: 230px;
-  }
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  max-height: 140px;
+}
+
+.socialmeadiaContainer {
+  color: blue;
+}
+
+.socialIconsImg {
+  border: solid;
+}
+
+.credits {
+  color: black;
+}
