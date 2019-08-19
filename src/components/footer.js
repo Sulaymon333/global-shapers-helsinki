@@ -1,16 +1,13 @@
 import React from 'react'
-import footerStyles from './footer.module.scss' //conect styles
-
-/* import { Link } from 'gatsby' // for adding link from the other internal pages so it would not load again whole page */
-
-/*Icons*/
-
-import logo from '../assets/gsh-logo.png'
+import footerStyles from './footer.module.scss'
+// import logo from '../assets/gsh-logo.png'
 import facebook from '../assets/social-icons/facebook.svg'
 import instagram from '../assets/social-icons/instagram.svg'
 import linkedIn from '../assets/social-icons/linkedin.svg'
 import twitter from '../assets/social-icons/medium.svg'
-// import youTube from '../assets/social-icons/youTube' // IMPORTANT! I dont have icon still
+// import youTube from '../assets/social-icons/youTube'
+
+// IMPORTANT! I dont have icon still
 
 const Footer = () => {
   return (
@@ -18,13 +15,13 @@ const Footer = () => {
       <form className={footerStyles.formContainer}>
         <p className={footerStyles.ContactUs}>Contact us</p>
 
-        <label className={footerStyles.email}>
+        <label className={footerStyles.email} htmlFor="email">
           <p>Email:</p>
-          <input type="text" name="email" />
+          <input type="text" name="email" id="email" />
         </label>
-        <label className={footerStyles.Message}>
+        <label className={footerStyles.Message} htmlFor="message">
           <p>Message:</p>
-          <input type="text" name="Message" />
+          <input type="text" name="Message" id="message" />
         </label>
         <button className={footerStyles.button} type="submit">
           Send
@@ -37,19 +34,17 @@ const Footer = () => {
           <a href="https://www.facebook.com/ShapersHel/">facebook</a>
         </p>
 
-        <p className={footerStyles.socialIcons}>
+        <p className={footerStyles.socialIconsImg}>
           <a href="https://twitter.com/globalshapers">twitter</a>
         </p>
-
-        <p className={footerStyles.socialIcons}>
+        <p className={footerStyles.socialIconsImg}>
           <a href="https://www.instagram.com/shapershel/">instagram</a>
         </p>
-
-        <p className={footerStyles.socialIcons}>
-          <a href="https://www.linkedin.com/company/shapershel/">linkedIn </a>
+        <p className={footerStyles.socialIconsImg}>
+          <a href="https://www.linkedin.com/company/shapershel/">linkedIn</a>
         </p>
 
-        <p className={footerStyles.socialIcons}>
+        <p className={footerStyles.socialIconsImg}>
           <a href="https://www.youtube.com/globalshapers">youTube</a>
         </p>
       </div>
@@ -58,14 +53,18 @@ const Footer = () => {
           Global Shapers Community
         </span>
         has more then
-        <span className={footerStyles.GlobalShapersCountNumbers}>
-          6000
-        </span>{' '}
+        <span className={footerStyles.GlobalShapersCountNumber}>6000</span>
         members and
-        <span className={footerStyles.GlobalShapersCountNumbers}>458</span> hubs
-        worldwide
+        <span className={footerStyles.GlobalShapersCountNumber}>458</span>
+        hubs worldwide
       </div>
-      <p className={footerStyles.credits}>Created by Integrify 2019 </p>
+
+      <div className={footerStyles.ownedAndDeveloped}>
+        <p className={footerStyles.owned}>Global Shapers Helsinki &copy;</p>
+        <p className={footerStyles.credits}>
+          The site was developed by &copy;Integrify Web Devlopers 2019
+        </p>
+      </div>
     </footer>
   )
 }

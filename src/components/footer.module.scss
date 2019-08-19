@@ -1,14 +1,19 @@
 .footerContainer {
+  background-color: #053872;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
-  max-height: 140px;
+  padding: 100px 0;
+  max-height: 480px;
 }
 
 .socialmeadiaContainer {
-  color: blue;
+  color: #053872;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .socialIconsImg {
@@ -20,18 +25,18 @@
 }
 
 .formContainer {
-  color: purple;
+  border: solid black;
 }
 
 .email {
-  color: #043770;
+  color: black;
 }
 .ContactUS {
-  color: bisque;
+  color: black;
 }
 
 .Message {
-  color: aqua;
+  color: black;
 }
 
 .button {
@@ -46,7 +51,7 @@
 }
 
 .GlobalShapersCount {
-  color: #043770;
+  color: black;
 }
 .GlobalShapersCountText {
   font-weight: bold;
@@ -54,4 +59,17 @@
 
 .GlobalShapersCountNumber {
   font-weight: bold;
+}
+
+.msgInput {
+  height: 150px;
+}
+
+.ownedAndDeveloped {
+  border: solid black;
+  widt
+}
+
+.owned {
+  color: black;
 }

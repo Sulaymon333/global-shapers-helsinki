@@ -8,8 +8,10 @@ import Footer from './footer'
 const Layout = () => {
   return (
     <div className={layoutstyles.container}>
-      <Header />
-      <Hero />
+      <div className={layoutstyles.content}>
+        <Header />
+        <Hero />
+      </div>
 
       <Footer />
     </div>
