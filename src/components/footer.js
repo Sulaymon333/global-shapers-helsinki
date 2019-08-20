@@ -31,37 +31,45 @@ const Footer = () => {
       </form>
 
       <div className={footerStyles.socialMediaContainer}>
-        <p className={footerStyles.socialMediaText}>
-          Folow us on social media:
-        </p>
-        <p className={footerStyles.socialIconsImg}>
-          <a href="https://www.facebook.com/ShapersHel/">facebook</a>
-        </p>
-
-        <p className={footerStyles.socialIconsImg}>
-          <a href="https://twitter.com/globalshapers">twitter</a>
-        </p>
-        <p className={footerStyles.socialIconsImg}>
-          <a href="https://www.instagram.com/shapershel/">instagram</a>
-        </p>
-        <p className={footerStyles.socialIconsImg}>
-          <a href="https://www.linkedin.com/company/shapershel/">linkedIn</a>
-        </p>
-
-        <p className={footerStyles.socialIconsImg}>
-          <a href="https://www.youtube.com/globalshapers">youTube</a>
-        </p>
+        <div className={footerStyles.socialMediaText}>
+          Follow us on social media:
+        </div>
+        <div className={footerStyles.allSocialIconsContainer}>
+          <p className={footerStyles.socialIconsImg}>
+            <a href="https://www.facebook.com/ShapersHel/">facebook</a>
+          </p>
+          <p className={footerStyles.socialIconsImg}>
+            <a href="https://twitter.com/globalshapers">twitter</a>
+          </p>
+          <p className={footerStyles.socialIconsImg}>
+            <a href="https://www.instagram.com/shapershel/">instagram</a>
+          </p>
+          <p className={footerStyles.socialIconsImg}>
+            <a href="https://www.linkedin.com/company/shapershel/">linkedIn</a>
+          </p>
+          <p className={footerStyles.socialIconsImg}>
+            <a href="https://www.youtube.com/globalshapers">youTube</a>
+          </p>
+        </div>
       </div>
       <div className={footerStyles.GScountAndOwnDevContainer}>
         <div className={footerStyles.GlobalShapersCountContainer}>
           <span className={footerStyles.GlobalShapersCountText}>
             Global Shapers Community
           </span>
-          has more then
-          <span className={footerStyles.GlobalShapersCountNumber}>6000</span>
-          members and
-          <span className={footerStyles.GlobalShapersCountNumber}>458</span>
-          hubs worldwide
+          <span className={footerStyles.GlobalShapersCountText2}>
+            {' '}
+            has more then
+          </span>
+          <span className={footerStyles.GlobalShapersCountNumber}> 6000 </span>
+          <span className={footerStyles.GlobalShapersCountText2}>
+            members and
+          </span>
+
+          <span className={footerStyles.GlobalShapersCountNumber}> 458 </span>
+          <span className={footerStyles.GlobalShapersCountText2}>
+            hubs worldwide
+          </span>
         </div>
 
         <div className={footerStyles.ownedAndDevelopedConatiner}>
