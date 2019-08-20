@@ -4,8 +4,8 @@ import footerStyles from './footer.module.scss'
 import facebook from '../assets/social-icons/facebook.svg'
 import instagram from '../assets/social-icons/instagram.svg'
 import linkedIn from '../assets/social-icons/linkedin.svg'
-import twitter from '../assets/social-icons/medium.svg'
-// import youTube from '../assets/social-icons/youTube'
+import twitter from '../assets/social-icons/twitter.svg'
+import youTube from '../assets/social-icons/medium.svg'
 
 // IMPORTANT! I dont have icon still
 
@@ -13,13 +13,13 @@ const Footer = () => {
   return (
     <footer className={footerStyles.footerContainer}>
       <form className={footerStyles.formContainer}>
-        <p className={footerStyles.ContactUs}>Contact us</p>
+        <p className={footerStyles.ContactUsText}>Contact us</p>
 
-        <label className={footerStyles.email} htmlFor="email">
+        <label className={footerStyles.emailText} htmlFor="email">
           <p>Email:</p>
           <input type="text" name="email" id="email" />
         </label>
-        <label className={footerStyles.Message} htmlFor="message">
+        <label className={footerStyles.MessageText} htmlFor="message">
           <p>Message:</p>
           <input type="text" name="Message" id="message" />
         </label>
@@ -29,26 +29,29 @@ const Footer = () => {
       </form>
 
       <div className={footerStyles.socialMediaContainer}>
-        <p> Folow us on social media: </p>
+        <p className={footerStyles.socialMediaText}>
+          Folow us on social media:
+        </p>
         <p className={footerStyles.socialIconsImg}>
-          <a href="https://www.facebook.com/ShapersHel/">facebook</a>
+          <a href="https://www.facebook.com/ShapersHel/">{facebook}</a>
         </p>
 
         <p className={footerStyles.socialIconsImg}>
-          <a href="https://twitter.com/globalshapers">twitter</a>
+          <a href="https://twitter.com/globalshapers">{twitter}</a>
         </p>
         <p className={footerStyles.socialIconsImg}>
-          <a href="https://www.instagram.com/shapershel/">instagram</a>
+          <a href="https://www.instagram.com/shapershel/">{instagram}</a>
         </p>
         <p className={footerStyles.socialIconsImg}>
-          <a href="https://www.linkedin.com/company/shapershel/">linkedIn</a>
+          <a href="https://www.linkedin.com/company/shapershel/">{linkedIn}</a>
         </p>
 
         <p className={footerStyles.socialIconsImg}>
-          <a href="https://www.youtube.com/globalshapers">youTube</a>
+          <a href="https://www.youtube.com/globalshapers">{youTube}</a>
         </p>
       </div>
-      <div className={footerStyles.GlobalShapersCount}>
+
+      <div className={footerStyles.GlobalShapersCountContainer}>
         <span className={footerStyles.GlobalShapersCountText}>
           Global Shapers Community
         </span>
@@ -59,10 +62,10 @@ const Footer = () => {
         hubs worldwide
       </div>
 
-      <div className={footerStyles.ownedAndDeveloped}>
+      <div className={footerStyles.ownedAndDevelopedConatiner}>
         <p className={footerStyles.owned}>Global Shapers Helsinki &copy;</p>
         <p className={footerStyles.credits}>
-          The site was developed by &copy;Integrify Web Devlopers 2019
+          The site was developed by Integrify Web Devlopers 2019
         </p>
       </div>
     </footer>
