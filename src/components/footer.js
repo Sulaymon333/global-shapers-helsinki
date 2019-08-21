@@ -1,37 +1,40 @@
 import React from 'react'
 import footerStyles from './footer.module.scss'
-// import facebook from '../assets/social-icons/facebook.svg'
-// import instagram from '../assets/social-icons/instagram.svg'
-// import linkedIn from '../assets/social-icons/linkedin.svg'
-// import twitter from '../assets/social-icons/twitter.svg'
+import facebook from '../assets/social-icons/facebook.svg'
+import instagram from '../assets/social-icons/instagram.svg'
+import linkedIn from '../assets/social-icons/linkedin.svg'
+import twitter from '../assets/social-icons/twitter.svg'
 // import youTube from '../assets/social-icons/medium.svg'
 
 const Footer = () => {
   return (
     <footer className={footerStyles.footerContainer}>
-      <form className={footerStyles.formContainer}>
+      <form className={footerStyles.ContactUsFormContainer}>
         <div className={footerStyles.ContactUsText}>Contact us</div>
-        <div className={footerStyles.emailBox}>
-          <label className={footerStyles.emailText} htmlFor="email">
-            <p>Email:</p>
-            <input type="text" name="email" id="email" />
-          </label>
-        </div>
-        <div className={footerStyles.msgBox}>
-          <label className={footerStyles.MessageText} htmlFor="message">
-            <p>Message:</p>
-            <input
-              // className="{footerStyles.msgInput}"
-              type="text"
-              name="Message"
-              id="message"
-            />
-          </label>
-        </div>
-        <div className={footerStyles.buttonBox}>
-          <button className={footerStyles.button} type="submit">
-            Send
-          </button>
+
+        <div className={footerStyles.formContainer}>
+          <div className={footerStyles.emailBox}>
+            <label className={footerStyles.emailText} htmlFor="email">
+              <p>Email:</p>
+              <input type="text" name="email" id="email" />
+            </label>
+          </div>
+          <div className={footerStyles.msgBox}>
+            <label className={footerStyles.MessageText} htmlFor="message">
+              <p>Message:</p>
+              <input
+                // className="{footerStyles.msgInput}"
+                type="text"
+                name="Message"
+                id="message"
+              />
+            </label>
+          </div>
+          <div className={footerStyles.buttonBox}>
+            <button className={footerStyles.button} type="submit">
+              Send
+            </button>
+          </div>
         </div>
       </form>
 
@@ -41,19 +44,36 @@ const Footer = () => {
         </div>
         <div className={footerStyles.allSocialIconsContainer}>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.facebook.com/ShapersHel/"> facebook </a>
+            <a href="https://www.facebook.com/ShapersHel/">
+              <img className={footerStyles.img} src={facebook} alt="Facebook" />
+            </a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://twitter.com/globalshapers"> twitter </a>
+            <a href="https://twitter.com/globalshapers">
+              {' '}
+              <img className={footerStyles.img} src={twitter} alt="Twitter" />
+            </a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.instagram.com/shapershel/"> instagram </a>
+            <a href="https://www.instagram.com/shapershel/">
+              {' '}
+              <img
+                className={footerStyles.img}
+                src={instagram}
+                alt="Instagram"
+              />
+            </a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.linkedin.com/company/shapershel/"> linkedIn</a>
+            <a href="https://www.linkedin.com/company/shapershel/">
+              {' '}
+              <img className={footerStyles.img} src={linkedIn} alt="Linkedin" />
+            </a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.youtube.com/globalshapers"> youTube </a>
+            <a href="https://www.youtube.com/globalshapers">
+              <img className={footerStyles.img} src={linkedIn} alt="Linkedin" />
+            </a>
           </p>
         </div>
       </div>

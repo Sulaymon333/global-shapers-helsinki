@@ -16,7 +16,8 @@
 /*****
 FORM
 *******/
-.formContainer {
+.ContactUsFormContainer {
+  //contact us + form
   background: white;
   grid-area: box1;
   border: solid purple;
@@ -29,6 +30,17 @@ FORM
   color: white;
   font-size: 2.2rem;
 }
+/*Form container: email+msg+button*/
+.formContainer {
+  display: grid;
+  grid-template-areas:
+    'row1'
+    'row2'
+    'row3';
+  width: 100%;
+  height: 100%;
+  border: solid green;
+}
 
 /*Email*/
 .emailText {
@@ -38,7 +50,7 @@ FORM
 }
 .emailBox {
   // email text+ input filed
-  border: solid red;
+  grid-area: row1;
 }
 
 /*Msg*/
@@ -51,11 +63,16 @@ FORM
 
 .msgBox {
   //msg texy + input field
-  border: solid red;
+  grid-area: row2;
 }
+
 /*Send button*/
 .buttonBox {
-  border: solid red;
+  border: none;
+  grid-area: row3;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  text-align: right;
 }
 .button {
   background: #2f7bc7;
@@ -63,8 +80,7 @@ FORM
   padding: 2px 20px;
   text-decoration: none;
   color: #cbd6e2;
-  max-width: 360px;
-  margin-bottom: 3rem;
+  // max-width: 360px;
   text-align: center;
 }
 
@@ -94,7 +110,9 @@ SOCIAL MEDIA BOX
 .allSocialIconsContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   grid-row: 2;
+  padding: 10px 10px;
 }
 .socialIconsImg {
   text-align: center;
