@@ -36,19 +36,19 @@ const Footer = () => {
         </div>
         <div className={footerStyles.allSocialIconsContainer}>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.facebook.com/ShapersHel/">facebook</a>
+            <a href="https://www.facebook.com/ShapersHel/"> facebook </a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://twitter.com/globalshapers">twitter</a>
+            <a href="https://twitter.com/globalshapers"> twitter </a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.instagram.com/shapershel/">instagram</a>
+            <a href="https://www.instagram.com/shapershel/"> instagram </a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.linkedin.com/company/shapershel/">linkedIn</a>
+            <a href="https://www.linkedin.com/company/shapershel/"> linkedIn</a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.youtube.com/globalshapers">youTube</a>
+            <a href="https://www.youtube.com/globalshapers"> youTube </a>
           </p>
         </div>
       </div>
