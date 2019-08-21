@@ -11,23 +11,28 @@ const Footer = () => {
     <footer className={footerStyles.footerContainer}>
       <form className={footerStyles.formContainer}>
         <div className={footerStyles.ContactUsText}>Contact us</div>
-
-        <label className={footerStyles.emailText} htmlFor="email">
-          <p>Email:</p>
-          <input type="text" name="email" id="email" />
-        </label>
-        <label className={footerStyles.MessageText} htmlFor="message">
-          <p>Message:</p>
-          <input
-            // className="{footerStyles.msgInput}"
-            type="text"
-            name="Message"
-            id="message"
-          />
-        </label>
-        <button className={footerStyles.button} type="submit">
-          Send
-        </button>
+        <div className={footerStyles.emailBox}>
+          <label className={footerStyles.emailText} htmlFor="email">
+            <p>Email:</p>
+            <input type="text" name="email" id="email" />
+          </label>
+        </div>
+        <div className={footerStyles.msgBox}>
+          <label className={footerStyles.MessageText} htmlFor="message">
+            <p>Message:</p>
+            <input
+              // className="{footerStyles.msgInput}"
+              type="text"
+              name="Message"
+              id="message"
+            />
+          </label>
+        </div>
+        <div className={footerStyles.buttonBox}>
+          <button className={footerStyles.button} type="submit">
+            Send
+          </button>
+        </div>
       </form>
 
       <div className={footerStyles.socialMediaContainer}>
