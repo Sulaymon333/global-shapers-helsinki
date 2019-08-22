@@ -6,13 +6,20 @@ import Hero from './Hero'
 import Members from './Members'
 import Community from './Community'
 
+import Footer from './footer'
+
+
 const Layout = () => {
   return (
     <div className={layoutstyles.container}>
-      <Header />
-      <Hero />
-      <Community />
+
+        <Header />
+        <Hero />
+    <Community />
       <Members />
+      </div>
+
+      <Footer />
     </div>
   )
 }

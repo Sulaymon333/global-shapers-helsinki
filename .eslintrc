@@ -18,7 +18,8 @@
         "components": ["Link"],
         "specialLink": ["to"]
       }
-    ]
+    ],
+    "linebreak-style": 0
   },
   "env": {
     "browser": true,
