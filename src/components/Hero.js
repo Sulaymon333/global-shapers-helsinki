@@ -6,7 +6,7 @@ import project from '../assets/icons/project.svg'
 
 const Hero = () => {
   return (
-    <main>
+    <>
       <div className={heroStyles.header}>
         <div className={heroStyles.heroDiv}>
           <h1 className={heroStyles.pageHeadingPrimary}>
@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </main>
+    </>
   )
 }
 
