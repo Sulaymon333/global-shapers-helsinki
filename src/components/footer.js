@@ -10,26 +10,34 @@ const Footer = () => {
   return (
     <footer className={footerStyles.footerContainer}>
       <form className={footerStyles.ContactUsFormContainer}>
+        {/* {CONTACT US} */}
         <div className={footerStyles.ContactUsText}>Contact us</div>
 
+        {/* {EMAIL + MSG =>FORM CONTAINER} */}
         <div className={footerStyles.formContainer}>
           <div className={footerStyles.emailBox}>
             <label className={footerStyles.emailText} htmlFor="email">
               <p>Email:</p>
-              <input type="text" name="email" id="email" />
+              <input
+                className={footerStyles.emailInput}
+                type="text"
+                name="email"
+                id="email"
+              />
             </label>
           </div>
           <div className={footerStyles.msgBox}>
             <label className={footerStyles.MessageText} htmlFor="message">
               <p>Message:</p>
               <input
-                // className="{footerStyles.msgInput}"
+                className={footerStyles.msgInput}
                 type="text"
                 name="Message"
                 id="message"
               />
             </label>
           </div>
+          {/* BUTTON */}
           <div className={footerStyles.buttonBox}>
             <button className={footerStyles.button} type="submit">
               Send
@@ -37,6 +45,8 @@ const Footer = () => {
           </div>
         </div>
       </form>
+
+      {/* SOCIAL MEDIA */}
 
       <div className={footerStyles.socialMediaContainer}>
         <div className={footerStyles.socialMediaText}>
@@ -77,8 +87,13 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+      {/* count and owndevelop */}
+
       <div className={footerStyles.GScountAndOwnDevContainer}>
         <div className={footerStyles.GlobalShapersCountContainer}>
+          {/* COUNT */}
+
           <span className={footerStyles.GlobalShapersCountText}>
             Global Shapers Community
           </span>
@@ -96,6 +111,7 @@ const Footer = () => {
             hubs worldwide
           </span>
         </div>
+        {/* own and developed */}
 
         <div className={footerStyles.ownedAndDevelopedConatiner}>
           <p className={footerStyles.ownedText}>
