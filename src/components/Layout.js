@@ -8,15 +8,14 @@ import Community from './Community'
 
 import Footer from './footer'
 
-
 const Layout = () => {
   return (
     <div className={layoutstyles.container}>
-
+      <div className={layoutstyles.content}>
         <Header />
         <Hero />
-    <Community />
-      <Members />
+        <Community />
+        <Members />
       </div>
 
       <Footer />
