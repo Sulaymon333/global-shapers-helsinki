@@ -9,7 +9,7 @@
   },
   "rules": {
     "semi": "off",
-    "quotes": ["error", "single"],
+    "quotes": ["error", "backtick", "singleQuote"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "arrow-body-style": 0,
     "jsx-a11y/anchor-is-valid": [
