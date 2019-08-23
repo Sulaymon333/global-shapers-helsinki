@@ -8,15 +8,10 @@ const Community = () => {
   const data = useStaticQuery(graphql`
     {
       allInstaNode {
-        totalCount
         edges {
           node {
             id
-            thumbnails {
-              src
-              config_width
-              config_height
-            }
+            original
           }
         }
       }
