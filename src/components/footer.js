@@ -113,7 +113,7 @@ const Footer = () => {
         </div>
         {/* own and developed */}
 
-        <div className={footerStyles.ownedAndDevelopedConatiner}>
+        <div className={footerStyles.ownedAndDevelopedContainer}>
           <p className={footerStyles.ownedText}>
             Global Shapers Helsinki &copy; 2019
           </p>
