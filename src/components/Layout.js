@@ -3,17 +3,20 @@ import Header from './Header'
 import '../styles/index.scss'
 import layoutstyles from './layout.module.scss'
 import Hero from './Hero'
-import Community from './Community' //some comment
-import Community2 from './Community2'
+import Footer from './footer'
+import Community2 from './community2'
 
 const Layout = () => {
   return (
-    <main className={layoutstyles.container}>
-      <Header />
-      <Hero />
-      {/* <Community /> */}
-      <Community2 />
-    </main>
+    <div className={layoutstyles.container}>
+      <div className={layoutstyles.content}>
+        <Header />
+        <Hero />
+        <Community2 />
+      </div>
+
+      <Footer />
+    </div>
   )
 }
 
