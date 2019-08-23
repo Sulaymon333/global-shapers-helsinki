@@ -2,17 +2,15 @@
   background-color: #053872;
   display: grid;
   border-top: #2f7bc7 10px;
+  border-top: #b9dff8 solid 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3fr 1fr;
   grid-template-areas:
     'box1 box2'
     'box3 box3';
-  // grid-column-gap: 2rem;
-  // grid-row-gap: 1rem;
   align-items: center;
   padding: 20px 0px 0px 0px;
   width: 100%;
-  // max-height: 480px;
 }
 
 /*****
@@ -22,7 +20,6 @@
   //contact us + form
   background-color: #043770;
   grid-area: box1;
-  border: 1px solid black;
   border-right: solid #2c76c1;
   display: flex;
   flex-direction: column;
@@ -35,12 +32,11 @@
     padding-bottom: 20px;
   }
 
+  /*Form container: email+msg+button*/
   .formContainer {
     background: white;
     border-radius: 20px;
     padding: 35px;
-
-    /*Form container: email+msg+button*/
 
     /*Email*/
     .emailBox {
