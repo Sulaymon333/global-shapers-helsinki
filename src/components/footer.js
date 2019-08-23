@@ -17,7 +17,7 @@ const Footer = () => {
         <div className={footerStyles.formContainer}>
           <div className={footerStyles.emailBox}>
             <label className={footerStyles.emailText} htmlFor="email">
-              <p>Email:</p>
+              <span>Email:</span>
               <input
                 className={footerStyles.emailInput}
                 type="text"
