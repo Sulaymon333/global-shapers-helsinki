@@ -4,7 +4,7 @@ import facebook from '../assets/social-icons/facebook.svg'
 import instagram from '../assets/social-icons/instagram.svg'
 import linkedIn from '../assets/social-icons/linkedin.svg'
 import twitter from '../assets/social-icons/twitter.svg'
-// import youTube from '../assets/social-icons/medium.svg'
+import youTube from '../assets/social-icons/youtube.svg'
 
 const Footer = () => {
   return (
@@ -71,8 +71,8 @@ const Footer = () => {
             </a>
           </p>
           <p className={footerStyles.socialIconsImg}>
-            <a href="https://www.youtube.com/globalshapers">
-              <img className={footerStyles.img} src={linkedIn} alt="Linkedin" />
+            <a href="https://www.youtube.com/channel/UC-tUMxwPNIYp_ZkN4CX0J9A">
+              <img className={footerStyles.img} src={youTube} alt="youTube" />
             </a>
           </p>
         </div>
