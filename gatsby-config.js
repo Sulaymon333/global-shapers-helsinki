@@ -8,5 +8,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `shapershel`,
+      },
+    },
   ],
 }

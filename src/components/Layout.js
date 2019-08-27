@@ -1,17 +1,18 @@
 import React from 'react'
 import Header from './Header'
-import '../styles/index.scss'
-import layoutstyles from './layout.module.scss'
-import Hero from './Hero'
-import Members from './Members'
-import Community from './Community'
 
+import Hero from './hero'
+import Members from './members'
+import Community from './community'
 import Footer from './footer'
+
+import '../styles/index.scss'
+import layoutStyles from './layout.module.scss'
 
 const Layout = () => {
   return (
-    <div className={layoutstyles.container}>
-      <div className={layoutstyles.content}>
+    <div className={layoutStyles.container}>
+      <div className={layoutStyles.content}>
         <Header />
         <Hero />
         <Community />

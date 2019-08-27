@@ -1,7 +1,14 @@
 import React from 'react'
 
+import communityStyles from './community.module.scss'
+import ImageGallery from './imageGallery'
+
 const Community = () => {
-  return <div>This is the community component</div>
+  return (
+    <section className={communityStyles.communitySection}>
+      <ImageGallery />
+    </section>
+  )
 }
 
 export default Community
