@@ -1,6 +1,8 @@
 import React from 'react'
-import Header from './header'
+import Header from './Header'
+
 import Hero from './hero'
+import Members from './members'
 import Community from './community'
 import Footer from './footer'
 
@@ -14,6 +16,7 @@ const Layout = () => {
         <Header />
         <Hero />
         <Community />
+        <Members />
       </div>
 
       <Footer />
