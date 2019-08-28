@@ -15,31 +15,93 @@
     ),
     url(https://scontent-hel2-1.xx.fbcdn.net/v/t1.0-9/48078921_2285773721702746_3205962000043606016_o.jpg?_nc_cat=101&_nc_oc=AQkblN0IS-0K1dEby_P9sCIqWIZ_kyBXFXaLjMJDpjSjF--ky0mKNPppFqYpKzp8G_9lXNuQU4upsvZYPjU4PaDn&_nc_ht=scontent-hel2-1.xx&oh=c0d1267e65115648be3619eea3ac75b6&oe=5DE03CD5);
   background-size: cover;
-  background-position: top;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
-  border-top: 11px solid #b9dff8;
+  border-top: 9px solid #b9dff8;
 }
 
-.pageHeading {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #aaa;
-  white-space: nowrap;
+.heroDiv {
+  margin: 4%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .pageHeadingPrimary {
   display: block;
   font-size: 3.125rem;
   font-weight: 300;
-  color: #3498db;
-  width: 80%;
-  font-family: "Montserrat";
+  color: #044b91;
+  font-family: 'Montserrat';
+
+  // position: absolute;
+  // top: 10%;
+  // left: 10%;
 }
 
 .pageHeadingSecondary {
   display: block;
   font-size: 1.5rem;
+  font-weight: 200;
+  margin-top: 1rem;
+}
+
+.joinBtn {
+  background: #043770;
+  border-radius: 50px;
+  padding: 10px 35px;
+  text-decoration: none;
+  color: #cbd6e2;
+  max-width: 180px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.bodyContainer {
+  margin: 6rem auto;
+}
+.bodyH1 {
   font-weight: 300;
+  color: #044b91;
+  text-align: center;
+  font-size: 3.125rem;
+  margin-bottom: 3%;
+  font-family: 'Montserrat';
+}
+.bodyPara {
+  color: #212934;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 1.2rem;
+  width: 80vw;
+  margin: 0 auto 9% auto;
+}
+
+.bodyIconsSection {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.bodyIconWrapper {
+  // width: 10vw;
+  height: 100%;
+  text-align: center;
+  flex: 0 1 calc(12vw + 90px);
+  margin: 30px;
+}
+.bodyIconImg {
+  width: 40%;
+  height: 100%;
+}
+
+.bodyIconText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #044b91;
+  margin-top: 10%;
+  text-align: center;
 }
