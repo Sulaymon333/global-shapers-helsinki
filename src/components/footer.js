@@ -4,7 +4,7 @@ import facebook from '../assets/social-icons/facebook.svg'
 import instagram from '../assets/social-icons/instagram.svg'
 import linkedIn from '../assets/social-icons/linkedin.svg'
 import twitter from '../assets/social-icons/twitter.svg'
-import youTube from '../assets/social-icons/youTu.svg'
+import youTube from '../assets/social-icons/youtube.svg'
 
 const Footer = () => {
   return (
