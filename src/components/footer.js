@@ -29,7 +29,7 @@ const Footer = () => {
           <div className={footerStyles.msgBox}>
             <label className={footerStyles.MessageText} htmlFor="message">
               <p>Message:</p>
-              <input
+              <textarea
                 className={footerStyles.msgInput}
                 type="text"
                 name="Message"
@@ -108,7 +108,7 @@ const Footer = () => {
 
           <span className={footerStyles.GlobalShapersCountNumber}> 458 </span>
           <span className={footerStyles.GlobalShapersCountText2}>
-            hubs worldwide
+            hubs worldwide.
           </span>
         </div>
         {/* own and developed */}
