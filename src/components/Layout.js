@@ -1,14 +1,15 @@
 import React from 'react'
-import Header from './Header'
 
+import Header from './Header'
 import Hero from './hero'
-import Members from './members'
 import Community from './community'
+import Members from './members'
+import Newsletter from './newsletter'
+import Projects from './projects'
 import Footer from './footer'
 
 import '../styles/index.scss'
 import layoutStyles from './layout.module.scss'
-import Newsletter from './newsletter'
 
 const Layout = () => {
   return (
@@ -19,6 +20,7 @@ const Layout = () => {
         <Community />
         <Members />
         <Newsletter />
+        <Projects />
       </div>
 
       <Footer />

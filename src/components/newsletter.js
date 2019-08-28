@@ -5,7 +5,7 @@ import newsletterStyles from './newsletter.module.scss'
 const Newsletter = () => {
   return (
     <section className={newsletterStyles.newsletterSection}>
-      <div className={newsletterStyles.wrapper}>
+      <div className={newsletterStyles.container}>
         <div className={newsletterStyles.text}>Subscribe to Our Newsletter</div>
         <form
           className={newsletterStyles.newsletterForm}

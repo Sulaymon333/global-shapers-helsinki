@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
+
 import membersStyles from './members.module.scss'
 
 const Members = () => {
@@ -22,7 +23,6 @@ const Members = () => {
       }
     }
   `)
-  console.log(data)
   return (
     <div className={membersStyles.membersSection}>
       <h1>GSH Members</h1>
@@ -56,4 +56,3 @@ const Members = () => {
   )
 }
 export default Members
-
