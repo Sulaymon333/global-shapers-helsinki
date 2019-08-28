@@ -1,5 +1,9 @@
+// color variables
+$primaryColor: #053872;
+$sendButton: #2f7bc7;
+
 .footerContainer {
-  background-color: #053872;
+  background-color: $primaryColor;
   display: grid;
   border-top: #b9dff8 solid 10px;
   grid-template-columns: 1fr 1fr;
@@ -17,9 +21,9 @@
   *******/
 .ContactUsFormContainer {
   //contact us + form
-  background-color: #043770;
+  background-color: $primaryColor;
   grid-area: box1;
-  border-right: solid #2c76c1;
+  border-right: solid $sendButton;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -54,6 +58,11 @@
         flex: 2;
         border: 1px solid black;
         height: 30px;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding: 1.2rem;
+        font-size: 1rem;
+        outline: 0;
       }
     }
 
@@ -75,8 +84,11 @@
       background-color: white;
       height: 200px;
       width: 100%;
+      padding: 1.2rem;
       border-radius: 20px;
       border: 1px solid black;
+      resize: none;
+      outline: 0;
     }
 
     /*Send button*/
@@ -85,13 +97,17 @@
       justify-content: flex-end;
     }
     .button {
-      background: #2f7bc7;
+      background: $sendButton;
       border-radius: 50px;
       padding: 8px 35px;
-      color: #cbd6e2;
+      color: #fff;
       text-align: center;
       font-size: 1.2rem;
       border: 1px solid transparent;
+
+      &:focus {
+        outline: 0;
+      }
     }
   }
 }
@@ -123,6 +139,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   grid-row: 2;
   padding: 10px 10px;
 }
@@ -145,24 +162,26 @@
 .GlobalShapersCountContainer {
   text-align: center;
   padding: 10px 10px 10px 10px; //text inside
+  padding: 1.5rem 0;
 }
 
 /*Text decoration in count*/
 .GlobalShapersCountText {
   color: white;
-  font-size: 0.7rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .GlobalShapersCountText2 {
   color: white;
-  font-size: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .GlobalShapersCountNumber {
   color: white;
-  font-size: 0.7rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 700;
 }
 /*****
   Credits and rights BOX (ownedAndDevelopedContainer)

@@ -8,6 +8,7 @@ import Footer from './footer'
 
 import '../styles/index.scss'
 import layoutStyles from './layout.module.scss'
+import Newsletter from './newsletter'
 
 const Layout = () => {
   return (
@@ -17,6 +18,7 @@ const Layout = () => {
         <Hero />
         <Community />
         <Members />
+        <Newsletter />
       </div>
 
       <Footer />

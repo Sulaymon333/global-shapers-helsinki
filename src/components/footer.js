@@ -4,7 +4,7 @@ import facebook from '../assets/social-icons/facebook.svg'
 import instagram from '../assets/social-icons/instagram.svg'
 import linkedIn from '../assets/social-icons/linkedin.svg'
 import twitter from '../assets/social-icons/twitter.svg'
-import youTube from '../assets/social-icons/youtube.svg'
+import youTube from '../assets/social-icons/youTu.svg'
 
 const Footer = () => {
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className={footerStyles.msgBox}>
             <label className={footerStyles.MessageText} htmlFor="message">
               <p>Message:</p>
-              <input
+              <textarea
                 className={footerStyles.msgInput}
                 type="text"
                 name="Message"
@@ -108,7 +108,7 @@ const Footer = () => {
 
           <span className={footerStyles.GlobalShapersCountNumber}> 458 </span>
           <span className={footerStyles.GlobalShapersCountText2}>
-            hubs worldwide
+            hubs worldwide.
           </span>
         </div>
         {/* own and developed */}
