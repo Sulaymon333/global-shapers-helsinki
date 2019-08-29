@@ -22,7 +22,7 @@ $boxShadow: rgb(185, 223, 248);
       display: grid;
       justify-content: center;
       // flex-wrap: wrap;
-      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
       grid-gap: 5rem;
       .projectBox {
         background: $deepBlueBase;
