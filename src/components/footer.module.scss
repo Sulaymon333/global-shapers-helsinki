@@ -332,20 +332,38 @@ $sendButton: #2f7bc7;
     width: 95%;
     display: flex;
     flex-direction: column;
-  }
+    // background: red;
+    padding: 0.8rem;
 
-  .formContainer {
-    background: white;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    // padding: 10px;
-  }
+    .formContainer {
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      padding: 1.2rem;
 
-  .emailBox {
-    padding-bottom: 30px;
-
-    // flex-wrap: column;
+      .emailBox {
+        padding-bottom: 30px;
+        .emailText {
+          flex-direction: column;
+          align-items: flex-start;
+          span {
+            padding-bottom: 0.7rem;
+            font-weight: 500;
+          }
+          .emailInput {
+            margin-left: 0px;
+            width: 100%;
+            padding: 0.6rem;
+          }
+        }
+      }
+      .MessageText {
+        p {
+          font-weight: 500;
+        }
+      }
+    }
   }
 
   .allSocialIconsContainer {
