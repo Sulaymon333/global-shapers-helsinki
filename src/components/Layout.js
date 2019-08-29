@@ -1,9 +1,11 @@
 import React from 'react'
-import Header from './Header'
 
+import Header from './Header'
 import Hero from './hero'
-import Members from './members'
 import Community from './community'
+import Members from './members'
+import Newsletter from './newsletter'
+import Projects from './projects'
 import Footer from './footer'
 
 import '../styles/index.scss'
@@ -17,6 +19,8 @@ const Layout = () => {
         <Hero />
         <Community />
         <Members />
+        <Newsletter />
+        <Projects />
       </div>
 
       <Footer />
