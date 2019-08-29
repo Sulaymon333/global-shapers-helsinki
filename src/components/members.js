@@ -4,7 +4,7 @@ import membersStyles from './members.module.scss'
 
 const Members = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       allContentfulMembers {
         edges {
           node {
@@ -56,4 +56,3 @@ const Members = () => {
   )
 }
 export default Members
-
