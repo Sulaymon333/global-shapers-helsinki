@@ -11,7 +11,7 @@ const Newsletter = () => {
           className={newsletterStyles.newsletterForm}
           name="newsletterForm"
           method="POST"
-          netlify
+          netlify="true"
         >
           <input type="text" placeholder="Your email address" />
           <button type="submit">Send</button>

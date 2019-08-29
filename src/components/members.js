@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import membersStyles from './members.module.scss'
 
-const Members = () => {
+const Members = ({ title }) => {
   const data = useStaticQuery(graphql`
     {
       allContentfulMembers {
@@ -25,7 +25,7 @@ const Members = () => {
   console.log(data)
   return (
     <div className={membersStyles.membersSection}>
-      <h1>GSH Members</h1>
+      <h1>{title}</h1>
       <div className={membersStyles.flexcontainer}>
         {data.allContentfulMembers.edges.map((edge, index) => {
           return (

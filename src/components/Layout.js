@@ -1,28 +1,18 @@
 import React from 'react'
 
-import Header from './Header'
-import Hero from './hero'
-import Community from './community'
-import Members from './members'
-import Newsletter from './newsletter'
-import Projects from './projects'
+import Header from './header'
 import Footer from './footer'
 
-import '../styles/index.scss'
 import layoutStyles from './layout.module.scss'
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <div className={layoutStyles.container}>
+      {/* sticky footer */}
       <div className={layoutStyles.content}>
         <Header />
-        <Hero />
-        <Community />
-        <Members />
-        <Newsletter />
-        <Projects />
+        {children}
       </div>
-
       <Footer />
     </div>
   )
