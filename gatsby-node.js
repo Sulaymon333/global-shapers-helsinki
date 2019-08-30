@@ -27,7 +27,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   if (response.errors) {
     throw response.errors
   }
-
+  console.log(response)
   const { edges } = response.data.allContentfulProjects
   console.log(edges)
 

@@ -14,7 +14,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        data: '@import "variables.scss";',
+        includePaths: ['src/components'],
+      },
+    },
     {
       resolve: `gatsby-source-instagram`,
       options: {

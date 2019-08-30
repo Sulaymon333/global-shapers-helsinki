@@ -1,5 +1,4 @@
 .header {
-  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,5 +26,14 @@
   font-size: 1.5rem;
   margin-right: 2.3rem;
   text-decoration: none;
-  color: #044b91;
+  color: $deepBlueBase;
+}
+
+.navItem:hover {
+  color: $sendButton;
+}
+
+.activeNavItem {
+  color: $deepBlueBase;
+  border-bottom: 4px solid $sendButton;
 }

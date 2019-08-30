@@ -1,8 +1,8 @@
 // color variables
-$deepBlueBase: #044b91;
-$sendButton: #2f7bc7;
-$white: #fff;
-$boxShadow: rgb(185, 223, 248);
+// $deepBlueBase: #044b91;
+// $sendButton: #2f7bc7;
+// $white: #fff;
+// $boxShadow: rgb(185, 223, 248);
 
 .projectsSection {
   margin: 5rem 0;
@@ -20,7 +20,7 @@ $boxShadow: rgb(185, 223, 248);
     }
     .projectBoxes {
       display: grid;
-      justify-content: center;
+      // justify-content: center;
       // flex-wrap: wrap;
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
       grid-gap: 5rem;

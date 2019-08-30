@@ -13,17 +13,29 @@ const Header = () => {
       <nav className={headerStyles.mainNav}>
         <ul className={headerStyles.navList}>
           <li>
-            <Link className={headerStyles.navItem} to="#">
+            <Link
+              className={headerStyles.navItem}
+              to="#about"
+              activeClassName={headerStyles.activeNavItem}
+            >
               About
             </Link>
           </li>
           <li>
-            <Link className={headerStyles.navItem} to="#">
+            <Link
+              className={headerStyles.navItem}
+              to="/super-women-coders"
+              activeClassName={headerStyles.activeNavItem}
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link className={headerStyles.navItem} to="#">
+            <Link
+              className={headerStyles.navItem}
+              to="#join"
+              activeClassName={headerStyles.activeNavItem}
+            >
               Join
             </Link>
           </li>

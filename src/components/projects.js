@@ -30,7 +30,7 @@ const Projects = () => {
   const { edges } = data.allContentfulProjects
 
   return (
-    <section className={projectsStyles.projectsSection}>
+    <section className={projectsStyles.projectsSection} id="projects">
       <div className={projectsStyles.container}>
         <h1 className={projectsStyles.title}>GSH Projects</h1>
         <div className={projectsStyles.projectBoxes}>
