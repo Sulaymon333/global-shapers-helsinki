@@ -6,6 +6,7 @@ import Layout from '../components/js/layout'
 import Hero from '../components/js/hero'
 import Community from '../components/js/community'
 import Members from '../components/js/members'
+import Members2 from '../components/js/members2'
 import Newsletter from '../components/js/newsletter'
 import Projects from '../components/js/projects'
 
@@ -17,7 +18,8 @@ const Index = ({ data }) => {
     <Layout>
       <Hero />
       <Community />
-      <Members title="GSH Members" />
+      {/*<Members title="GSH Members" />*/}
+      <Members2 title="GSH Members2" />
       <Newsletter />
       <Projects />
     </Layout>
@@ -25,14 +27,15 @@ const Index = ({ data }) => {
 }
 
 export default Index
-export const query = graphql`
-  query {
-    allContentfulMembers {
-      edges {
-        node {
-          title
-        }
-      }
-    }
-  }
-`
+
+// export const query = graphql`
+//   query {
+//     allContentfulMembers {
+//       edges {
+//         node {
+//           title
+//         }
+//       }
+//     }
+//   }
+// `

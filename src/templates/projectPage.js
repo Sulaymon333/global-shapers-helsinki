@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/js/layout'
 
 import HeroProject from '../components/js/heroProject'
+import ProjectGallery from '../components/js/projectGallery'
 import Members from '../components/js/members'
 import Newsletter from '../components/js/newsletter'
 import Projects from '../components/js/projects'
@@ -41,6 +42,7 @@ const ProjectPage = props => {
     <Layout>
       {/* <Hero /> */}
       <HeroProject title={title} coverImage={coverImage} />
+      <ProjectGallery id={id} projectImages={projectImages} />
       <Members title="Project Members" />
       <Newsletter />
       <Projects />

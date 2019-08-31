@@ -32,12 +32,12 @@ const Projects = () => {
   return (
     <section className={projectsStyles.projectsSection} id="projects">
       <div className={projectsStyles.container}>
-        <h1 className={projectsStyles.title}>GSH Projects</h1>
-        <div className={projectsStyles.projectBoxes}>
+        <h1 className={projectsStyles.sectionTitle}>GSH Projects</h1>
+        <div className={projectsStyles.projectCards}>
           {edges.map(edge => {
             return (
               <Link to={`project/${edge.node.slug}`} key={edge.node.id}>
-                <div className={projectsStyles.projectBox}>
+                <div className={projectsStyles.projectCard}>
                   <div className={projectsStyles.projectCoverImage}>
                     <img
                       src={edge.node.coverImage.file.url}
