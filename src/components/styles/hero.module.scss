@@ -1,4 +1,4 @@
-.header {
+.heroSection {
   min-height: calc(100vh - 140px);
   background-image: linear-gradient(
       rgba(217, 234, 245, 0.7),
@@ -24,7 +24,7 @@
   display: block;
   font-size: 3.125rem;
   font-weight: 300;
-  color: #044b91;
+  color: $deepBlueBase;
   font-family: 'Montserrat';
 
   // position: absolute;
@@ -40,12 +40,59 @@
 }
 
 .joinBtn {
-  background: #043770;
+  background: $ctaButton;
   border-radius: 50px;
   padding: 10px 35px;
   text-decoration: none;
   color: #cbd6e2;
   max-width: 180px;
   margin-bottom: 3rem;
+  text-align: center;
+}
+.bodyContainer {
+  margin: 6rem auto;
+}
+.bodyH1 {
+  font-weight: 300;
+  color: $deepBlueBase;
+  text-align: center;
+  font-size: 3.125rem;
+  margin-bottom: 3%;
+  font-family: 'Montserrat';
+}
+.bodyPara {
+  color: #212934;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 1.2rem;
+  width: 80vw;
+  margin: 0 auto 9% auto;
+}
+
+.bodyIconsSection {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.bodyIconWrapper {
+  // width: 10vw;
+  height: 100%;
+  text-align: center;
+  flex: 0 1 calc(12vw + 90px);
+  margin: 30px;
+}
+.bodyIconImg {
+  width: 40%;
+  height: 100%;
+}
+
+.bodyIconText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $deepBlueBase;
+  margin-top: 10%;
   text-align: center;
 }

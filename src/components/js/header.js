@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../assets/gsh-logo.png'
-import headerStyles from './header.module.scss'
+
+import logo from '../../assets/gsh-logo.png'
+
+import headerStyles from '../styles/header.module.scss'
 
 const Header = () => {
   return (
@@ -24,7 +26,7 @@ const Header = () => {
           <li>
             <Link
               className={headerStyles.navItem}
-              to="/super-women-coders"
+              to="/project/super-women-coders"
               activeClassName={headerStyles.activeNavItem}
             >
               Projects

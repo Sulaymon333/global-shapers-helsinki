@@ -5,8 +5,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const projectTemplate = path.resolve('./src/templates/projectPage.js')
 
   const response = await graphql(`
-    {
+    query {
       allContentfulProjects {
+        totalCount
         edges {
           node {
             id
@@ -18,7 +19,11 @@ module.exports.createPages = async ({ graphql, actions }) => {
             }
             title
             description
-            location
+            projectImages {
+              file {
+                url
+              }
+            }
           }
         }
       }
@@ -27,16 +32,20 @@ module.exports.createPages = async ({ graphql, actions }) => {
   if (response.errors) {
     throw response.errors
   }
-  console.log(response)
+
   const { edges } = response.data.allContentfulProjects
-  console.log(edges)
 
   edges.forEach(edge => {
     createPage({
-      path: edge.node.slug,
+      path: `project/${edge.node.slug}`,
       component: projectTemplate,
       context: {
+        // id: edge.node.id,
         slug: edge.node.slug,
+        // coverImage: edge.node.coverImage,
+        // title: edge.node.title,
+        // description: edge.node.description,
+        // projectImages: edge.node.projectImages,
       },
     })
   })

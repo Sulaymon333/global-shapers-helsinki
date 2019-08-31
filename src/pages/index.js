@@ -1,15 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../components/js/layout'
 
-import Hero from '../components/hero'
-import Community from '../components/community'
-import Members from '../components/members'
-import Newsletter from '../components/newsletter'
-import Projects from '../components/projects'
+import Hero from '../components/js/hero'
+import Community from '../components/js/community'
+import Members from '../components/js/members'
+import Newsletter from '../components/js/newsletter'
+import Projects from '../components/js/projects'
 
-import '../styles/index.scss'
+import '../components/styles/index.scss'
 
 const Index = ({ data }) => {
   console.log(data)

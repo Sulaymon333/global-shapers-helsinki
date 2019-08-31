@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const BlogPost = () => {
   const data = useStaticQuery(graphql`
-    {
+    query {
       allContentfulProjects {
         totalCount
         edges {

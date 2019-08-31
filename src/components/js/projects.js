@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 
-import projectsStyles from './projects.module.scss'
+import projectLocation from '../../assets/icons/Location.svg'
 
-import projectLocation from '../assets/icons/Location.svg'
+import projectsStyles from '../styles/projects.module.scss'
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
-    {
+    query {
       allContentfulProjects {
         edges {
           node {
@@ -36,7 +36,7 @@ const Projects = () => {
         <div className={projectsStyles.projectBoxes}>
           {edges.map(edge => {
             return (
-              <Link to={edge.node.slug} key={edge.node.id}>
+              <Link to={`project/${edge.node.slug}`} key={edge.node.id}>
                 <div className={projectsStyles.projectBox}>
                   <div className={projectsStyles.projectCoverImage}>
                     <img

@@ -1,10 +1,12 @@
 import React from 'react'
-import footerStyles from './footer.module.scss'
-import facebook from '../assets/social-icons/facebook.svg'
-import instagram from '../assets/social-icons/instagram.svg'
-import linkedIn from '../assets/social-icons/linkedin.svg'
-import twitter from '../assets/social-icons/twitter.svg'
-import youTube from '../assets/social-icons/youtube.svg'
+
+import facebook from '../../assets/social-icons/facebook.svg'
+import instagram from '../../assets/social-icons/instagram.svg'
+import linkedIn from '../../assets/social-icons/linkedin.svg'
+import twitter from '../../assets/social-icons/twitter.svg'
+import youTube from '../../assets/social-icons/youtube.svg'
+
+import footerStyles from '../styles/footer.module.scss'
 
 const Footer = () => {
   return (

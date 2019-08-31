@@ -1,6 +1,6 @@
 import React from 'react'
 
-import newsletterStyles from './newsletter.module.scss'
+import newsletterStyles from '../styles/newsletter.module.scss'
 
 const Newsletter = () => {
   return (

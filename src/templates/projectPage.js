@@ -1,16 +1,46 @@
 import React from 'react'
 
-import Layout from '../components/layout'
+import { graphql } from 'gatsby'
 
-import Hero from '../components/hero'
-import Members from '../components/members'
-import Newsletter from '../components/newsletter'
-import Projects from '../components/projects'
+import Layout from '../components/js/layout'
 
-const ProjectPage = () => {
+import HeroProject from '../components/js/heroProject'
+import Members from '../components/js/members'
+import Newsletter from '../components/js/newsletter'
+import Projects from '../components/js/projects'
+
+export const query = graphql`
+  query($slug: String!) {
+    contentfulProjects(slug: { eq: $slug }) {
+      id
+      title
+      coverImage {
+        file {
+          url
+        }
+      }
+      description
+      projectImages {
+        file {
+          url
+        }
+      }
+    }
+  }
+`
+
+const ProjectPage = props => {
+  const {
+    id,
+    title,
+    coverImage,
+    description,
+    projectImages,
+  } = props.data.contentfulProjects
   return (
     <Layout>
       {/* <Hero /> */}
+      <HeroProject title={title} coverImage={coverImage} />
       <Members title="Project Members" />
       <Newsletter />
       <Projects />

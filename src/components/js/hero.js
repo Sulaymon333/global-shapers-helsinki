@@ -1,13 +1,15 @@
 import React from 'react'
-import heroStyles from './hero.module.scss'
-import team from '../assets/icons/team.svg'
-import time from '../assets/icons/time.svg'
-import project from '../assets/icons/project.svg'
+
+import team from '../../assets/icons/team.svg'
+import time from '../../assets/icons/time.svg'
+import project from '../../assets/icons/project.svg'
+
+import heroStyles from '../styles/hero.module.scss'
 
 const Hero = () => {
   return (
     <>
-      <div className={heroStyles.header}>
+      <div className={heroStyles.heroSection}>
         <div className={heroStyles.heroDiv}>
           <h1 className={heroStyles.pageHeadingPrimary}>
             Global Shapers Helsinki (GSH)

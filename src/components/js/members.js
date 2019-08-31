@@ -1,10 +1,11 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import membersStyles from './members.module.scss'
+
+import membersStyles from '../styles/members.module.scss'
 
 const Members = ({ title }) => {
   const data = useStaticQuery(graphql`
-    {
+    query {
       allContentfulMembers {
         edges {
           node {
@@ -22,7 +23,7 @@ const Members = ({ title }) => {
       }
     }
   `)
-  console.log(data)
+
   return (
     <div className={membersStyles.membersSection}>
       <h1>{title}</h1>
