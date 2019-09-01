@@ -18,7 +18,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
               }
             }
             title
-            description
+            projectDetail {
+              json
+            }
             projectImages {
               file {
                 url

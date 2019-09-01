@@ -7,6 +7,7 @@ module.exports = {
     authors: `@tjtechi, @MirelaViitanen, Kunjan Ghimire`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-contentful`,
       options: {

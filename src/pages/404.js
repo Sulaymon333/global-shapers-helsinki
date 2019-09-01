@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/js/layout'
+import Head from '../components/js/head'
 
 class NotFoundPage extends React.Component {
   render() {
@@ -10,8 +11,12 @@ class NotFoundPage extends React.Component {
 
     return (
       <Layout>
+        <Head title="404 Page" />
         <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <p>The requested page was not found</p>
+        <p>
+          <Link to="/">Go back home</Link>{' '}
+        </p>
       </Layout>
     )
   }

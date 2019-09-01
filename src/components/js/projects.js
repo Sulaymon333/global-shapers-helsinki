@@ -19,7 +19,7 @@ const Projects = () => {
               }
             }
             title
-            description
+            projectShortDescription
             location
           }
         }
@@ -48,7 +48,7 @@ const Projects = () => {
                     {edge.node.title}
                   </p>
                   <p className={projectsStyles.projectDescription}>
-                    {edge.node.description}
+                    {edge.node.projectShortDescription}
                   </p>
                   <div className={projectsStyles.projectLocation}>
                     <img src={projectLocation} alt="location icon" />

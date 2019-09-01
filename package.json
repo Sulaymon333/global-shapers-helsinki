@@ -15,6 +15,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.13.83",
+    "gatsby-plugin-react-helmet": "^3.1.6",
     "gatsby-plugin-sass": "^2.1.12",
     "gatsby-source-contentful": "^2.1.29",
     "gatsby-source-instagram": "^0.5.1",
@@ -23,6 +24,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
     "react-images": "^1.0.0",
     "react-photo-gallery": "^8.0.0"
   },

@@ -15,7 +15,9 @@ const BlogPost = () => {
               }
             }
             title
-            description
+            projectDetail {
+              json
+            }
             projectImages {
               file {
                 url
