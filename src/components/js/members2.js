@@ -12,7 +12,6 @@ const Members2 = ({ title }) => {
             id
             firstname
             lastname
-            title
             linkedInUrl
             profilePicture {
               file {
@@ -41,9 +40,6 @@ const Members2 = ({ title }) => {
                   <p className={membersStyles2.fullName}>
                     {edge.node.firstname} {edge.node.lastname}
                   </p>
-                  <small className={membersStyles2.position}>
-                    {edge.node.title}
-                  </small>
                 </div>
                 <img
                   className={membersStyles2.memberImg}

@@ -11,7 +11,6 @@ const Members = ({ title }) => {
           node {
             firstname
             lastname
-            title
             linkedInUrl
             profilePicture {
               file {
@@ -38,9 +37,6 @@ const Members = ({ title }) => {
                 <div className={membersStyles.textContainer}>
                   <p className={membersStyles.name}>
                     {edge.node.firstname} {edge.node.lastname}
-                  </p>
-                  <p>
-                    <small>{edge.node.title}</small>
                   </p>
                 </div>
               </a>

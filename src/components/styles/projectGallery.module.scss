@@ -1,78 +1,58 @@
-.projectGallerySection {
-  margin: 5rem 0;
-  //   background: red;
+.projectGalleryImages {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(15px, 1fr) 0.5fr repeat(15px, 1fr) 0.5fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-auto-rows: 100px;
+}
 
-  .container {
-    width: $containerWidth;
-    margin: 0 auto;
-    padding-right: 15px;
-
-    // .sectionTitle {
-    //   color: $deepBlueBase;
-    //   font-size: 2.5rem;
-    //   text-align: center;
-    //   font-weight: 300;
-    //   font-size: 3.125rem;
-    //   margin-bottom: 3%;
-    // }
-
-    .projectGalleryImages {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(15px, 1fr) 0.5fr repeat(15px, 1fr) 0.5fr;
-      grid-column-gap: 8px;
-      grid-row-gap: 8px;
-      grid-auto-rows: 100px;
-    }
-
-    .projectGalleryImage {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-      opacity: 0.8;
-      transition: opacity 0.5s;
-      cursor: pointer;
-      &:hover {
-        opacity: 1 !important;
-      }
-    }
-
-    .projectGalleryImage:nth-child(1) {
-      grid-area: 1 / 1 / 7 / 4;
-    }
-    .projectGalleryImage:nth-child(2) {
-      grid-area: 1 / 4 / 4 / 7;
-    }
-    .projectGalleryImage:nth-child(3) {
-      grid-area: 4 / 4 / 7 / 7;
-    }
-    .projectGalleryImage:nth-child(4) {
-      grid-area: 1 / 7 / 3 / 10;
-    }
-    .projectGalleryImage:nth-child(5) {
-      grid-area: 3 / 7 / 7 / 10;
-    }
-    .projectGalleryImage:nth-child(6) {
-      grid-area: 1 / 10 / 5 / 12;
-    }
-    .projectGalleryImage:nth-child(7) {
-      grid-area: 5 / 10 / 7 / 12;
-    }
-    .projectGalleryImage:nth-child(8) {
-      grid-area: 1 / 12 / 7 / 15;
-    }
-
-    .projectGalleryTitle {
-      font-size: 1.2rem;
-      padding-bottom: 0.8rem;
-    }
-    .projectGalleryDescription {
-      font-size: 0.8rem;
-      line-height: 1.5;
-      font-weight: 300;
-    }
+.projectGalleryImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+  cursor: pointer;
+  &:hover {
+    opacity: 1 !important;
   }
+}
+
+.projectGalleryImage:nth-child(1) {
+  grid-area: 1 / 1 / 7 / 4;
+}
+.projectGalleryImage:nth-child(2) {
+  grid-area: 1 / 4 / 4 / 7;
+}
+.projectGalleryImage:nth-child(3) {
+  grid-area: 4 / 4 / 7 / 7;
+}
+.projectGalleryImage:nth-child(4) {
+  grid-area: 1 / 7 / 3 / 10;
+}
+.projectGalleryImage:nth-child(5) {
+  grid-area: 3 / 7 / 7 / 10;
+}
+.projectGalleryImage:nth-child(6) {
+  grid-area: 1 / 10 / 5 / 12;
+}
+.projectGalleryImage:nth-child(7) {
+  grid-area: 5 / 10 / 7 / 12;
+}
+.projectGalleryImage:nth-child(8) {
+  grid-area: 1 / 12 / 7 / 15;
+}
+
+.projectGalleryTitle {
+  font-size: 1.2rem;
+  padding-bottom: 0.8rem;
+}
+.projectGalleryDescription {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 // .parent {

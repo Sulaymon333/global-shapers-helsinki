@@ -3,43 +3,19 @@ import React from 'react'
 import projectGalleryStyles from '../styles/projectGallery.module.scss'
 
 const ProjectGallery = ({ id, projectImages }) => {
-  //   const data = useStaticQuery(graphql`
-  //     query {
-  //       allContentfulProjects {
-  //         totalCount
-  //         edges {
-  //           node {
-  //             id
-  //             coverImage {
-  //               file {
-  //                 url
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `)
-
-  //   const { edges } = data.allContentfulProjects
-
   return (
-    <section className={projectGalleryStyles.projectGallerySection}>
-      <div className={projectGalleryStyles.container}>
-        <div className={projectGalleryStyles.projectGalleryImages}>
-          {projectImages.map(projectImage => {
-            return (
-              <img
-                key={id}
-                className={projectGalleryStyles.projectGalleryImage}
-                src={projectImage.file.url}
-                alt="Project image"
-              />
-            )
-          })}
-        </div>
-      </div>
-    </section>
+    <div className={projectGalleryStyles.projectGalleryImages}>
+      {projectImages.map(projectImage => {
+        return (
+          <img
+            key={id}
+            className={projectGalleryStyles.projectGalleryImage}
+            src={projectImage.file.url}
+            alt="Project image"
+          />
+        )
+      })}
+    </div>
   )
 }
 

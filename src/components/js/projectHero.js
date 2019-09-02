@@ -1,19 +1,19 @@
 import React from 'react'
 
-import heroProjectStyles from '../styles/heroProject.module.scss'
+import projectHeroStyles from '../styles/projectHero.module.scss'
 
 const HeroProject = ({ title, coverImage }) => {
   return (
     <>
       <div
-        className={heroProjectStyles.projectCoverImage}
+        className={projectHeroStyles.projectCoverImage}
         style={{ backgroundImage: `url(${coverImage.file.url})` }}
       ></div>
-      <div className={heroProjectStyles.container}>
-        <div className={heroProjectStyles.projectNameCta}>
-          <h1 className={heroProjectStyles.projectTitle}>{title}</h1>
+      <div className={projectHeroStyles.container}>
+        <div className={projectHeroStyles.projectNameCta}>
+          <h1 className={projectHeroStyles.projectTitle}>{title}</h1>
           <a
-            className={heroProjectStyles.joinProjectBtn}
+            className={projectHeroStyles.joinProjectBtn}
             target="_blank"
             href="https://www.globalshapers.org/hubs/helsinki-hub"
             id="join"
