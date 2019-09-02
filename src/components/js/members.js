@@ -1,16 +1,16 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import membersStyles from './members.module.scss'
 
-const Members = () => {
+import membersStyles from '../styles/members.module.scss'
+
+const Members = ({ title }) => {
   const data = useStaticQuery(graphql`
-    {
+    query {
       allContentfulMembers {
         edges {
           node {
             firstname
             lastname
-            title
             linkedInUrl
             profilePicture {
               file {
@@ -22,10 +22,10 @@ const Members = () => {
       }
     }
   `)
-  console.log(data)
+
   return (
     <div className={membersStyles.membersSection}>
-      <h1>GSH Members</h1>
+      <h1>{title}</h1>
       <div className={membersStyles.flexcontainer}>
         {data.allContentfulMembers.edges.map((edge, index) => {
           return (
@@ -37,9 +37,6 @@ const Members = () => {
                 <div className={membersStyles.textContainer}>
                   <p className={membersStyles.name}>
                     {edge.node.firstname} {edge.node.lastname}
-                  </p>
-                  <p>
-                    <small>{edge.node.title}</small>
                   </p>
                 </div>
               </a>

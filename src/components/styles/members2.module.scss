@@ -1,0 +1,56 @@
+.membersSection {
+  margin: 5rem 0;
+  text-align: center;
+
+  .sectionTitle {
+    font-weight: 300;
+    color: #044b91;
+    font-size: 4.125rem;
+    margin-bottom: 3%;
+  }
+
+  .memberCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 5rem;
+    justify-items: center;
+
+    .memberCard {
+      height: 400px;
+
+      .memberCardLink {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .memberDetails {
+          //   flex: 1;
+          color: #212934;
+          font-size: 1.2rem;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 600;
+
+          .fullName {
+            font-weight: 900;
+            font-size: 1.7rem;
+          }
+
+          .position {
+            color: $deepBlueBase;
+            font-weight: 200;
+          }
+        }
+
+        .memberImg {
+          //   flex: 1.6;
+          clip-path: polygon(45% 11%, 100% 0, 100% 100%, 5% 100%);
+          height: 400px;
+          width: 250px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

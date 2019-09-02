@@ -1,0 +1,398 @@
+// color variables
+$primaryColor: #053872;
+$sendButton: #2f7bc7;
+
+.footerSection {
+  background-color: $primaryColor;
+  display: grid;
+  border-top: #b9dff8 solid 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+    'box1 box2'
+    'box3 box3';
+  align-items: center;
+  padding-top: 20px;
+  width: 100%;
+}
+
+/*****
+  FORM
+  *******/
+.ContactUsFormContainer {
+  //contact us + form
+  background-color: $primaryColor;
+  grid-area: box1;
+  border-right: solid $sendButton;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  .ContactUsText {
+    background: #043770;
+    color: white;
+    font-size: 2.2rem;
+    padding-bottom: 20px;
+  }
+
+  /*Form container: email+msg+button*/
+  .formContainer {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+
+    /*Email*/
+    .emailBox {
+      padding-bottom: 20px;
+      .emailText {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+      .emailInput {
+        margin-left: 20px;
+        border-radius: 20px;
+        flex: 2;
+        border: 1px solid black;
+        height: 30px;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding: 1.2rem;
+        font-size: 1rem;
+        outline: 0;
+      }
+    }
+
+    /*Msg*/
+    .msgBox {
+      padding-bottom: 20px;
+    }
+
+    .MessageText {
+      p {
+        padding-bottom: 20px;
+      }
+      color: black;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .msgInput {
+      background-color: white;
+      height: 200px;
+      width: 100%;
+      padding: 1.2rem;
+      border-radius: 20px;
+      border: 1px solid black;
+      resize: none;
+      outline: 0;
+    }
+
+    /*Send button*/
+    .buttonBox {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .button {
+      background: $sendButton;
+      border-radius: 50px;
+      padding: 8px 35px;
+      color: #fff;
+      text-align: center;
+      font-size: 1.2rem;
+      border: 1px solid transparent;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+/*****
+  SOCIAL MEDIA BOX
+  *******/
+
+.socialMediaContainer {
+  align-items: center;
+  grid-area: box2; //main footer grid position
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 50px 0;
+  width: 100%;
+}
+
+.socialMediaText {
+  color: white;
+  font-size: 1.8rem;
+  grid-row: 1;
+}
+
+.allSocialIconsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  grid-row: 2;
+  padding: 10px 10px;
+}
+.socialIconsImg {
+  text-align: center;
+  color: black;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+//BOX3 of main FOOTER GRID (we have 2 sub-boxes inside count and ownedDeveloped)
+
+.GScountAndOwnDevContainer {
+  grid-area: box3; //position in the main footer grid
+  width: 100%;
+  // border: black solid 10px;
+}
+/* Counter*/
+.GlobalShapersCountContainer {
+  text-align: center;
+  padding: 10px 10px 10px 10px; //text inside
+  padding: 1.5rem 0;
+}
+
+/*Text decoration in count*/
+.GlobalShapersCountText {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.GlobalShapersCountText2 {
+  color: white;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.GlobalShapersCountNumber {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+/*****
+  Credits and rights BOX (ownedAndDevelopedContainer)
+  *******/
+.ownedAndDevelopedContainer {
+  background-color: #b9dff8;
+  display: flex; //inside text
+  flex-direction: column; //inside text in 2 columns
+  align-items: center;
+  padding: 20px 0px; //text inside
+  width: 100%;
+}
+
+/*text decoration*/
+.ownedText {
+  color: #043770;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.creditsText {
+  color: #043770;
+  font-size: 0.7rem;
+}
+
+/*MEDIA QUERRY*/
+@media only screen and (max-width: 900px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ContactUsFormContainer {
+    border-right: none;
+  }
+
+  .allSocialIconsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+}
+
+// I need media for bigger od 900 px to get rid of blue line or in code with sulaymon
+
+/* 600 px-900px*/
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ContactUsFormContainer {
+    border-right: none;
+  }
+
+  .allSocialIconsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  .socialMediaText {
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  .GlobalShapersCountText {
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .GlobalShapersCountText2 {
+    color: white;
+    font-size: 0.6rem;
+  }
+
+  .GlobalShapersCountNumber {
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+}
+/* max 600 px*/
+@media only screen and (max-width: 600px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+  }
+
+  .ContactUsFormContainer {
+    border-right: none;
+  }
+
+  .formContainer {
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .allSocialIconsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  .socialMediaText {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .GlobalShapersCountText {
+    color: white;
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
+
+  .GlobalShapersCountText2 {
+    color: white;
+    font-size: 0.5rem;
+  }
+
+  .GlobalShapersCountNumber {
+    color: white;
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
+}
+
+//for 360 and smaller I want email text and box to go to seperate rows
+@media only screen and (max-width: 380px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+  }
+
+  .ContactUsFormContainer {
+    border-right: none;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    // background: red;
+    padding: 0.8rem;
+
+    .formContainer {
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      padding: 1.2rem;
+
+      .emailBox {
+        padding-bottom: 30px;
+        .emailText {
+          flex-direction: column;
+          align-items: flex-start;
+          span {
+            padding-bottom: 0.7rem;
+            font-weight: 500;
+          }
+          .emailInput {
+            margin-left: 0px;
+            width: 100%;
+            padding: 0.6rem;
+          }
+        }
+      }
+      .MessageText {
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .allSocialIconsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  .socialMediaText {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .GlobalShapersCountText {
+    padding-right: 2px;
+    color: white;
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
+
+  .GlobalShapersCountText2 {
+    color: white;
+    font-size: 0.5rem;
+  }
+
+  .GlobalShapersCountNumber {
+    color: white;
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
+}

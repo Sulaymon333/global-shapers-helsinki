@@ -1,16 +1,11 @@
-// color variables
-$deepBlueBase: #044b91;
-$sendButton: #2f7bc7;
-$white: #fff;
-$boxShadow: rgb(185, 223, 248);
-
 .projectsSection {
   margin: 5rem 0;
   .container {
-    width: 80%;
+    width: $containerWidth;
+    max-width: $containerMaxWidth;
     margin: 0 auto;
 
-    .title {
+    .sectionTitle {
       color: $deepBlueBase;
       font-size: 2.5rem;
       text-align: center;
@@ -18,16 +13,19 @@ $boxShadow: rgb(185, 223, 248);
       font-size: 3.125rem;
       margin-bottom: 3%;
     }
-    .projectBoxes {
+    .projectCards {
       display: grid;
-      justify-content: center;
-      // flex-wrap: wrap;
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
       grid-gap: 5rem;
-      .projectBox {
+      justify-items: center;
+
+      > * {
+        text-decoration: none;
+      }
+
+      .projectCard {
         background: $deepBlueBase;
         color: $white;
-        // flex: 0 1 30.3333%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -40,7 +38,6 @@ $boxShadow: rgb(185, 223, 248);
         -webkit-box-shadow: 12px 11px 0px 0px $boxShadow;
         -moz-box-shadow: 12px 11px 0px 0px $boxShadow;
         .projectCoverImage {
-          // padding-bottom: 0.3rem;
           margin-bottom: 0.5rem;
           height: 200px;
           img {
@@ -59,7 +56,6 @@ $boxShadow: rgb(185, 223, 248);
           font-size: 0.8rem;
           line-height: 1.5;
           font-weight: 300;
-          // padding-bottom: 1rem;
         }
         .projectLocation {
           display: flex;
@@ -74,6 +70,15 @@ $boxShadow: rgb(185, 223, 248);
             font-size: 0.9rem;
           }
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 380px) {
+  .projectsSection {
+    .projectCards {
+      .projectCard {
+        max-width: 90%;
       }
     }
   }

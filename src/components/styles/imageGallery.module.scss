@@ -2,8 +2,12 @@
   width: 100%;
   margin-right: -5px;
   display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 0.3rem;
+
   .instagramImagesGallery {
-    flex: 1;
+    // flex: 1;
     display: grid;
     grid-template-columns: repeat(6, minmax(10px, 1fr));
     grid-template-rows: repeat(3, 9vw);
@@ -39,7 +43,7 @@
     grid-area: 2 / 5 / 4 / 7;
   }
   .videoThumbnail {
-    flex: 1;
+    // flex: 1;
     img {
       height: 100%;
       width: 100%;

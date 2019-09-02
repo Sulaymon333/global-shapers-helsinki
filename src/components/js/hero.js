@@ -1,13 +1,15 @@
 import React from 'react'
-import heroStyles from './hero.module.scss'
-import team from '../assets/icons/team.svg'
-import time from '../assets/icons/time.svg'
-import project from '../assets/icons/project.svg'
+
+import team from '../../assets/icons/team.svg'
+import time from '../../assets/icons/time.svg'
+import project from '../../assets/icons/project.svg'
+
+import heroStyles from '../styles/hero.module.scss'
 
 const Hero = () => {
   return (
     <>
-      <div className={heroStyles.header}>
+      <div className={heroStyles.heroSection}>
         <div className={heroStyles.heroDiv}>
           <h1 className={heroStyles.pageHeadingPrimary}>
             Global Shapers Helsinki (GSH)
@@ -20,13 +22,14 @@ const Hero = () => {
           <a
             className={heroStyles.joinBtn}
             target="_blank"
-            href="https://google.com"
+            href="https://www.globalshapers.org/hubs/helsinki-hub"
+            id="join"
           >
             Join now!
           </a>
         </div>
       </div>
-      <div className={heroStyles.bodyContainer}>
+      <div className={heroStyles.bodyContainer} id="about">
         <h1 className={heroStyles.bodyH1}>Who we are?</h1>
         <p className={heroStyles.bodyPara}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque hic
@@ -69,8 +72,7 @@ const Hero = () => {
 export default Hero
 
 // import React from "react"
-// import heroStyles from "./hero.module.scss"
-
+// import heroStyles from "./hero.module.scss" */
 // const Hero = () => {
 //   return (
 //     <div className={heroStyles.header}>

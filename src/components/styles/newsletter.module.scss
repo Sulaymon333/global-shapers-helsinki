@@ -1,11 +1,8 @@
-// color variables
-$deepBlueBase: #044b91;
-$sendButton: #2f7bc7;
-
 .newsletterSection {
   margin: 5rem 0;
   .container {
-    width: 80%;
+    width: $containerWidth;
+    max-width: $containerMaxWidth;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -13,7 +10,7 @@ $sendButton: #2f7bc7;
       flex: 1;
     }
     .text {
-      font-size: 1.5rem;
+      font-size: calc(1.5vw + 0.6rem);
       color: $deepBlueBase;
       font-weight: 700;
     }
@@ -23,6 +20,7 @@ $sendButton: #2f7bc7;
         background: #d9eaf5;
         padding: 0.9rem 2rem;
         font-size: 1rem;
+        font-size: calc(0.7vw + 0.5rem);
         font-style: italic;
         color: $deepBlueBase;
         outline: none;
@@ -37,9 +35,8 @@ $sendButton: #2f7bc7;
         }
       }
       button {
-        padding: 0.9rem 0.3rem;
-        padding-bottom: 0.8rem;
-        font-size: 1.2rem;
+        padding: calc(0.5vw + 0.5rem) calc(1.3vw + 0.4rem);
+        font-size: calc(1.2vw + 0.5rem);
         font-weight: 700;
         color: white;
         background: $sendButton;
@@ -50,6 +47,21 @@ $sendButton: #2f7bc7;
         &:focus {
           outline: 0;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .newsletterSection {
+    .container {
+      flex-direction: column;
+    }
+
+    .newsletterForm {
+      input,
+      button {
+        margin-top: 2rem;
       }
     }
   }

@@ -1,7 +1,13 @@
 require('dotenv').config()
 
 module.exports = {
+  siteMetadata: {
+    title: `Global Shapers Helsinki Official Website`,
+    description: `This is the official website of Global Shapers Helsinki Hub.`,
+    authors: `@tjtechi, @MirelaViitanen, Kunjan Ghimire`,
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -9,7 +15,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        data: '@import "variables.scss";',
+        includePaths: ['src/components/styles'],
+      },
+    },
     {
       resolve: `gatsby-source-instagram`,
       options: {
