@@ -10,7 +10,7 @@ import footerStyles from '../styles/footer.module.scss'
 
 const Footer = () => {
   return (
-    <footer className={footerStyles.footerContainer}>
+    <footer className={footerStyles.footerSection}>
       <form className={footerStyles.ContactUsFormContainer}>
         {/* {CONTACT US} */}
         <div className={footerStyles.ContactUsText}>Contact us</div>

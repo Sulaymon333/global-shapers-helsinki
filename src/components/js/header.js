@@ -8,9 +8,11 @@ import headerStyles from '../styles/header.module.scss'
 const Header = () => {
   return (
     <header className={headerStyles.header}>
-      <div className={headerStyles.imgLogo}>
-        <img className={headerStyles.img} src={logo} alt="Logo" />
-      </div>
+      <Link to="/">
+        <div className={headerStyles.imgLogo}>
+          <img className={headerStyles.img} src={logo} alt="Logo" />
+        </div>
+      </Link>
 
       <nav className={headerStyles.mainNav}>
         <ul className={headerStyles.navList}>

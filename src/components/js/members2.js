@@ -26,7 +26,7 @@ const Members2 = ({ title }) => {
   `)
   const { edges } = data.allContentfulMembers
   return (
-    <div className={membersStyles2.membersSection}>
+    <section className={membersStyles2.membersSection}>
       <h1 className={membersStyles2.sectionTitle}>{title}</h1>
       <div className={membersStyles2.memberCards}>
         {edges.map(edge => {
@@ -54,7 +54,7 @@ const Members2 = ({ title }) => {
           )
         })}
       </div>
-    </div>
+    </section>
   )
 }
 export default Members2

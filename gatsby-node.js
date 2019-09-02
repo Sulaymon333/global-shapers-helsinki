@@ -26,6 +26,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                 url
               }
             }
+            publishedDate
           }
         }
       }
@@ -42,12 +43,13 @@ module.exports.createPages = async ({ graphql, actions }) => {
       path: `project/${edge.node.slug}`,
       component: projectTemplate,
       context: {
-        // id: edge.node.id,
+        id: edge.node.id,
         slug: edge.node.slug,
-        // coverImage: edge.node.coverImage,
-        // title: edge.node.title,
-        // description: edge.node.description,
-        // projectImages: edge.node.projectImages,
+        title: edge.node.title,
+        coverImage: edge.node.coverImage,
+        projectDetail: edge.node.projectDetail,
+        projectImages: edge.node.projectImages,
+        publishedDate: edge.node.publishedDate,
       },
     })
   })

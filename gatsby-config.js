@@ -3,7 +3,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Global Shapers Helsinki Official Website`,
-    description: `This is the official website of Global Shaper Helsinki Hub.`,
+    description: `This is the official website of Global Shapers Helsinki Hub.`,
     authors: `@tjtechi, @MirelaViitanen, Kunjan Ghimire`,
   },
   plugins: [
@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         data: '@import "variables.scss";',
-        includePaths: ['src/components'],
+        includePaths: ['src/components/styles'],
       },
     },
     {

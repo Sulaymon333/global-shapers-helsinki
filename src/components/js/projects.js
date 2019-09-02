@@ -8,7 +8,7 @@ import projectsStyles from '../styles/projects.module.scss'
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProjects {
+      allContentfulProjects(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
             id
