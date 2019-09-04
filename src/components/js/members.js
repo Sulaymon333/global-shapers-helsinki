@@ -9,9 +9,10 @@ const Members = ({ title }) => {
       allContentfulMembers {
         edges {
           node {
+            id
             firstname
             lastname
-            linkedInUrl
+            socialMediaUrl
             profilePicture {
               file {
                 url
@@ -33,7 +34,7 @@ const Members = ({ title }) => {
               className={membersStyles.eachMembercontainer}
               key={'edge' + index}
             >
-              <a href={edge.node.linkedInUrl} target="blank">
+              <a href={edge.node.socialMediaUrl} target="blank">
                 <div className={membersStyles.textContainer}>
                   <p className={membersStyles.name}>
                     {edge.node.firstname} {edge.node.lastname}
