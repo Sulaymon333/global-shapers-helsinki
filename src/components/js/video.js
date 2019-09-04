@@ -7,20 +7,24 @@ import videoStyles from '../styles/video.module.scss'
 
 const Video = props => {
   const initialState = {
-    title: '',
-    width: 1280,
-    height: 720,
+    title: 'video Image',
+    width: '100%',
+    height: '100%',
     frameBorder: 0,
     play: 0,
     allowFullScreen: true,
   }
   const [videoSettings, setVideoSettings] = useState(initialState)
-  const src = `https://www.youtube.com/embed/PwXyq4oQ75M?autoplay=${videoSettings.play}`
+
+  const src = `https://www.youtube.com/embed/5dGPhrkGou0?rel=0&autoplay=${videoSettings.play}`
+
   const playVideo = () => {
-    setVideoSettings({
-      ...videoSettings,
-      play: 1,
-    })
+    setTimeout(() => {
+      setVideoSettings({
+        ...videoSettings,
+        play: 1,
+      })
+    }, 500)
   }
   const { title, width, height, frameBorder, allowFullScreen } = videoSettings
   return (

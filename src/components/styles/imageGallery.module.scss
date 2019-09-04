@@ -43,7 +43,15 @@
     grid-area: 2 / 5 / 4 / 7;
   }
   .videoThumbnail {
-    // flex: 1;
+    div {
+      height: 100%;
+      iframe {
+        height: 100%;
+        border-radius: 10px;
+        min-height: 350px;
+      }
+    }
+
     img {
       height: 100%;
       width: 100%;
