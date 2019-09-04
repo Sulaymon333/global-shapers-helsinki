@@ -29,6 +29,7 @@
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
         border: 1px solid transparent;
+        display: block !important;
 
         &::placeholder {
           color: $deepBlueBase;
@@ -44,6 +45,7 @@
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
         border: 1px solid transparent;
+        overflow: hidden;
         &:focus {
           outline: 0;
         }
