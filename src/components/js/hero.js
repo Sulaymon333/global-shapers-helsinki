@@ -22,7 +22,7 @@ const Hero = () => {
           <a
             className={heroStyles.joinBtn}
             target="_blank"
-            href="https://www.globalshapers.org/hubs/helsinki-hub"
+            href="https://weforum.eu.qualtrics.com/jfe/form/SV_6F4bAg3fL2x1eXb"
             id="join"
           >
             Join now!

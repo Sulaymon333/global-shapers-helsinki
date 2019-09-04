@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import defaultProfileImage from '../../assets/portraits/placeholder-image.png'
 
 import membersStyles2 from '../styles/members2.module.scss'
 
 const Members2 = ({ title }) => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulMembers {
+      allContentfulMembersTest {
         edges {
           node {
-            id
             firstname
             lastname
-            linkedInUrl
+            socialMediaUrl
             profilePicture {
               file {
                 url
@@ -23,17 +23,23 @@ const Members2 = ({ title }) => {
       }
     }
   `)
-  const { edges } = data.allContentfulMembers
+  const { edges } = data.allContentfulMembersTest
+
+  console.log(edges)
   return (
     <section className={membersStyles2.membersSection}>
       <h1 className={membersStyles2.sectionTitle}>{title}</h1>
       <div className={membersStyles2.memberCards}>
         {edges.map(edge => {
           return (
-            <div className={membersStyles2.memberCard} key={edge.node.id}>
+            <div
+              className={membersStyles2.memberCard}
+              key={edge.node.id}
+              title={edge.node.socialMediaUrl === null ? 'No social Media' : ''}
+            >
               <a
                 className={membersStyles2.memberCardLink}
-                href={edge.node.linkedInUrl}
+                href={edge.node.socialMediaUrl}
                 target="blank"
               >
                 <div className={membersStyles2.memberDetails}>
@@ -43,7 +49,11 @@ const Members2 = ({ title }) => {
                 </div>
                 <img
                   className={membersStyles2.memberImg}
-                  src={edge.node.profilePicture.file.url}
+                  src={
+                    edge.node.profilePicture === null
+                      ? `${defaultProfileImage}`
+                      : edge.node.profilePicture.file.url
+                  }
                 />
               </a>
             </div>

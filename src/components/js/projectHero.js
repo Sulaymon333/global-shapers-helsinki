@@ -15,7 +15,7 @@ const HeroProject = ({ title, coverImage }) => {
           <a
             className={projectHeroStyles.joinProjectBtn}
             target="_blank"
-            href="https://www.globalshapers.org/hubs/helsinki-hub"
+            href="https://weforum.eu.qualtrics.com/jfe/form/SV_6F4bAg3fL2x1eXb"
             id="join"
           >
             Join Project
