@@ -1,8 +1,10 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../components/js/layout'
 import Head from '../components/js/head'
+import Header from '../components/js/header'
+
+import notFoundStyles from '../components/styles/404.module.scss'
 
 class NotFoundPage extends React.Component {
   render() {
@@ -10,14 +12,19 @@ class NotFoundPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout>
+      <>
+        <Header />
         <Head title="404 Page" />
-        <h1>Not Found</h1>
-        <p>The requested page was not found</p>
-        <p>
-          <Link to="/">Go back home</Link>{' '}
-        </p>
-      </Layout>
+        <div className={notFoundStyles.container}>
+          <h1 className={notFoundStyles.pageTitle}>Not Found</h1>
+          <p className={notFoundStyles.pageDescription}>
+            The requested page was not found.
+          </p>
+          <Link className={notFoundStyles.homeButton} to="/">
+            Back Home
+          </Link>
+        </div>
+      </>
     )
   }
 }

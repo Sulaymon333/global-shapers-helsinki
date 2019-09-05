@@ -4,12 +4,13 @@ import defaultProfileImage from '../../assets/portraits/placeholder-image.png'
 
 import membersStyles2 from '../styles/members2.module.scss'
 
-const Members2 = ({ title }) => {
+const Members2 = ({ title, projectPage }) => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulMembersTest {
         edges {
           node {
+            id
             firstname
             lastname
             socialMediaUrl
@@ -28,7 +29,12 @@ const Members2 = ({ title }) => {
   console.log(edges)
   return (
     <section className={membersStyles2.membersSection}>
-      <h1 className={membersStyles2.sectionTitle}>{title}</h1>
+      <h1
+        className={`${membersStyles2.sectionTitle} ${projectPage &&
+          membersStyles2.container}`}
+      >
+        {title}
+      </h1>
       <div className={membersStyles2.memberCards}>
         {edges.map(edge => {
           return (

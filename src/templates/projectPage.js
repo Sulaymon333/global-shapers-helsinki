@@ -52,9 +52,9 @@ const ProjectPage = props => {
         projectImages={projectImages}
       />
       {/*<Members title="Project Members" />*/}
-      <Members2 title="Project Members" />
+      <Members2 title="Project Members" projectPage={true} />
       <Newsletter />
-      <Projects />
+      <Projects projectPage={true} />
     </Layout>
   )
 }

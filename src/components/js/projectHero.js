@@ -7,7 +7,9 @@ const HeroProject = ({ title, coverImage }) => {
     <>
       <div
         className={projectHeroStyles.projectCoverImage}
-        style={{ backgroundImage: `url(${coverImage.file.url})` }}
+        style={{
+          backgroundImage: `url(${coverImage.file.url}?w=800&h=300&fit=fill`,
+        }}
       ></div>
       <div className={projectHeroStyles.container}>
         <div className={projectHeroStyles.projectNameCta}>

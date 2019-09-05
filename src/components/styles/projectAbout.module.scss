@@ -10,9 +10,10 @@
   }
 
   .projectDetail {
-    font-size: calc(0.8vw + 0.5rem);
+    font-size: calc(1.1vw + 0.6rem);
     font-weight: 300;
     margin-bottom: 4rem;
     line-height: 1.5;
+    color: $textColor;
   }
 }
