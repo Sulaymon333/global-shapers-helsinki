@@ -220,9 +220,10 @@ $sendButton: #2f7bc7;
   }
 
   .allSocialIconsContainer {
+    border: black 10px solid;
     display: flex;
     flex-direction: row;
-    flex-flow: column;
+    flex-flow: row wrap;
     justify-content: space-around;
   }
 }
@@ -232,7 +233,7 @@ $sendButton: #2f7bc7;
 /* 600 px-900px*/
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-  .footerContainer {
+  .footerSevtion {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -273,7 +274,7 @@ $sendButton: #2f7bc7;
 }
 /* max 600 px*/
 @media only screen and (max-width: 600px) {
-  .footerContainer {
+  .footerSection {
     display: flex;
     flex-direction: column;
     // width: 100%;
@@ -321,7 +322,7 @@ $sendButton: #2f7bc7;
 
 //for 360 and smaller I want email text and box to go to seperate rows
 @media only screen and (max-width: 380px) {
-  .footerContainer {
+  .footerSection {
     display: flex;
     flex-direction: column;
     // width: 100%;
