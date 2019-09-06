@@ -146,6 +146,7 @@ $sendButton: #2f7bc7;
 .socialIconsImg {
   text-align: center;
   color: black;
+  height: auto;
   width: 100%;
   padding-right: 10px;
   padding-left: 10px;
@@ -160,6 +161,7 @@ $sendButton: #2f7bc7;
 }
 /* Counter*/
 .GlobalShapersCountContainer {
+  border-top: 1px solid $boxShadow;
   text-align: center;
   padding: 10px 10px 10px 10px; //text inside
   padding: 1.5rem 0;
@@ -220,10 +222,9 @@ $sendButton: #2f7bc7;
   }
 
   .allSocialIconsContainer {
-    border: black 10px solid;
     display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
+    flex-direction: row !important;
+    // flex-flow: row nowrap !important;
     justify-content: space-around;
   }
 }
@@ -233,7 +234,7 @@ $sendButton: #2f7bc7;
 /* 600 px-900px*/
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-  .footerSevtion {
+  .footerSection {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -243,10 +244,20 @@ $sendButton: #2f7bc7;
     border-right: none;
   }
 
+  .socialMediaContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -10px;
+  }
+
+  .socialMediaText {
+    padding-bottom: 8px;
+  }
+
   .allSocialIconsContainer {
     display: flex;
     flex-direction: row;
-    flex-flow: column;
+
     justify-content: space-around;
   }
 
@@ -255,20 +266,24 @@ $sendButton: #2f7bc7;
     font-size: 1.8rem;
   }
 
+  .GlobalShapersCountContainer {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .GlobalShapersCountText {
     color: white;
-    font-size: 0.7rem;
+    font-size: 1 rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
     color: white;
-    font-size: 0.6rem;
+    font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
     color: white;
-    font-size: 0.7rem;
+    font-size: 1 rem;
     font-weight: bold;
   }
 }
@@ -297,31 +312,44 @@ $sendButton: #2f7bc7;
     justify-content: space-around;
   }
 
+  .socialIconsImg {
+    .img {
+      width: 85%;
+    }
+  }
+
   .socialMediaText {
     color: white;
     font-size: 1.5rem;
+    padding-bottom: 3px;
+  }
+
+  .GlobalShapersCountContainer {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
   }
 
   .GlobalShapersCountText {
     color: white;
-    font-size: 0.5rem;
+    font-size: 1 rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
     color: white;
-    font-size: 0.5rem;
+    font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
     color: white;
-    font-size: 0.5rem;
+    font-size: 1 rem;
     font-weight: bold;
   }
 }
 
-//for 360 and smaller I want email text and box to go to seperate rows
-@media only screen and (max-width: 380px) {
+//for 420 and smaller I want email text and box to go to seperate rows
+@media only screen and (max-width: 420px) {
   .footerSection {
     display: flex;
     flex-direction: column;
@@ -379,21 +407,32 @@ $sendButton: #2f7bc7;
     font-size: 1.2rem;
   }
 
+  .socialIconsImg {
+    .img {
+      width: 85%;
+    }
+  }
+
+  .GlobalShapersCountContainer {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+  }
   .GlobalShapersCountText {
     padding-right: 2px;
     color: white;
-    font-size: 0.5rem;
+    font-size: 1rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
     color: white;
-    font-size: 0.5rem;
+    font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
     color: white;
-    font-size: 0.5rem;
+    font-size: 1rem;
     font-weight: bold;
   }
 }
