@@ -161,7 +161,7 @@ $sendButton: #2f7bc7;
 }
 /* Counter*/
 .GlobalShapersCountContainer {
-  border-top: 1px solid $boxShadow;
+  // border-top: 1px solid $boxShadow;
   text-align: center;
   padding: 10px 10px 10px 10px; //text inside
   padding: 1.5rem 0;
@@ -221,6 +221,9 @@ $sendButton: #2f7bc7;
     border-right: none;
   }
 
+  .GlobalShapersCountContainer {
+    border-top: 1px solid $boxShadow;
+  }
   .allSocialIconsContainer {
     display: flex;
     flex-direction: row !important;
