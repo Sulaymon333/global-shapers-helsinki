@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import team from '../../assets/icons/team.svg'
 import time from '../../assets/icons/time.svg'
@@ -7,6 +8,20 @@ import project from '../../assets/icons/project.svg'
 import heroStyles from '../styles/hero.module.scss'
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulMembersTest {
+        totalCount
+      }
+      allContentfulProjects {
+        totalCount
+      }
+    }
+  `)
+
+  const { totalCount: totalCountMembers } = data.allContentfulMembersTest
+  const { totalCount: totalCountProjects } = data.allContentfulProjects
+
   return (
     <>
       <div className={heroStyles.heroSection}>
@@ -45,7 +60,9 @@ const Hero = () => {
               src={team}
               alt="team icon"
             />
-            <p className={heroStyles.bodyIconText}>28 Shapers</p>
+            <p className={heroStyles.bodyIconText}>
+              {totalCountMembers} Shapers
+            </p>
           </div>
           <div className={heroStyles.bodyIconWrapper}>
             <img
@@ -61,7 +78,9 @@ const Hero = () => {
               src={project}
               alt="Project icon"
             />
-            <p className={heroStyles.bodyIconText}>5 Projects completed</p>
+            <p className={heroStyles.bodyIconText}>
+              {totalCountProjects} Projects completed
+            </p>
           </div>
         </div>
       </div>
@@ -70,25 +89,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-// import React from "react"
-// import heroStyles from "./hero.module.scss" */
-// const Hero = () => {
-//   return (
-//     <div className={heroStyles.header}>
-//       <div className={heroStyles.heroDiv}>
-//       <h1 className={heroStyles.pageHeadingPrimary}>
-//         Global Shapers Helsinki (GSH)
-//       </h1>
-//       <h3 className={heroStyles.pageHeadingSecondary}>
-//         is a network of young people driving
-//         <br /> dialogue, action and change.
-//       </h3>
-//       <a  className={heroStyles.joinBtn} target="_blank" href="https://google.com">Join now!</a>
-//     </div>
-//     </div>
-
-//   )
-// }
-
-// export default Hero
