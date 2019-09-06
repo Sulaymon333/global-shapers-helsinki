@@ -26,7 +26,20 @@ const Members2 = ({ title, projectPage }) => {
   `)
   const { edges } = data.allContentfulMembersTest
 
-  console.log(edges)
+  // sort by profile picture first
+
+  // filter by picture
+  const profileWithPicture = edges.filter(profile => {
+    return profile.node.profilePicture
+  })
+
+  // filter without picture
+  const profileWithoutPicture = edges.filter(profile => {
+    return !profile.node.profilePicture
+  })
+
+  const sortedEdges = profileWithPicture.concat(profileWithoutPicture)
+
   return (
     <section className={membersStyles2.membersSection}>
       <h1
@@ -36,7 +49,7 @@ const Members2 = ({ title, projectPage }) => {
         {title}
       </h1>
       <div className={membersStyles2.memberCards}>
-        {edges.map(edge => {
+        {sortedEdges.map(edge => {
           return (
             <div
               className={membersStyles2.memberCard}
