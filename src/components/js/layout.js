@@ -10,8 +10,8 @@ const Layout = ({ children }) => {
     <div className={layoutStyles.container}>
       {/* sticky footer */}
       <div className={layoutStyles.content}>
-        {/* <Header />
-        {children} */}
+        <Header />
+        {children}
       </div>
       <Footer />
     </div>
