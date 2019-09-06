@@ -1,0 +1,10 @@
+.projectDetailSection {
+  margin: 5rem 0;
+
+  .container {
+    width: $containerWidth;
+    max-width: $containerMaxWidth;
+    margin: 0 auto;
+    padding-right: 15px;
+  }
+}

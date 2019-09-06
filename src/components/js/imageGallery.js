@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
-import imageGalleryStyles from './imageGallery.module.scss'
-import videoThumbnail from '../assets/video-thumbnail.png'
+import imageGalleryStyles from '../styles/imageGallery.module.scss'
+import Video from './video'
 
 const ImageGallery = () => {
   const data = useStaticQuery(graphql`
@@ -36,7 +36,7 @@ const ImageGallery = () => {
       </div>
 
       <div className={imageGalleryStyles.videoThumbnail}>
-        <img src={videoThumbnail} alt="GSH Instagram image" />
+        <Video />
       </div>
     </div>
   )

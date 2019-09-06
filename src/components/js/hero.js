@@ -1,14 +1,31 @@
 import React from 'react'
-import heroStyles from './hero.module.scss'
-import team from '../assets/icons/team.svg'
-import time from '../assets/icons/time.svg'
-import project from '../assets/icons/project.svg'
+import { graphql, useStaticQuery } from 'gatsby'
+
+import team from '../../assets/icons/team.svg'
+import time from '../../assets/icons/time.svg'
+import project from '../../assets/icons/project.svg'
+
+import heroStyles from '../styles/hero.module.scss'
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulMembersTest {
+        totalCount
+      }
+      allContentfulProjects {
+        totalCount
+      }
+    }
+  `)
+
+  const { totalCount: totalCountMembers } = data.allContentfulMembersTest
+  const { totalCount: totalCountProjects } = data.allContentfulProjects
+
   return (
     <>
-      <div className={heroStyles.header}>
-        <div className={heroStyles.heroDiv}>
+      <div className={heroStyles.heroSection}>
+        <div className={heroStyles.brandInfoContainer}>
           <h1 className={heroStyles.pageHeadingPrimary}>
             Global Shapers Helsinki (GSH)
           </h1>
@@ -20,13 +37,14 @@ const Hero = () => {
           <a
             className={heroStyles.joinBtn}
             target="_blank"
-            href="https://google.com"
+            href="https://weforum.eu.qualtrics.com/jfe/form/SV_6F4bAg3fL2x1eXb"
+            id="join"
           >
             Join now!
           </a>
         </div>
       </div>
-      <div className={heroStyles.bodyContainer}>
+      <div className={heroStyles.container} id="about">
         <h1 className={heroStyles.bodyH1}>Who we are?</h1>
         <p className={heroStyles.bodyPara}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque hic
@@ -42,7 +60,9 @@ const Hero = () => {
               src={team}
               alt="team icon"
             />
-            <p className={heroStyles.bodyIconText}>20 Shapers</p>
+            <p className={heroStyles.bodyIconText}>
+              {totalCountMembers} Shapers
+            </p>
           </div>
           <div className={heroStyles.bodyIconWrapper}>
             <img
@@ -58,7 +78,9 @@ const Hero = () => {
               src={project}
               alt="Project icon"
             />
-            <p className={heroStyles.bodyIconText}>10 Projects completed</p>
+            <p className={heroStyles.bodyIconText}>
+              {totalCountProjects} Projects completed
+            </p>
           </div>
         </div>
       </div>
@@ -67,26 +89,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-// import React from "react"
-// import heroStyles from "./hero.module.scss"
-
-// const Hero = () => {
-//   return (
-//     <div className={heroStyles.header}>
-//       <div className={heroStyles.heroDiv}>
-//       <h1 className={heroStyles.pageHeadingPrimary}>
-//         Global Shapers Helsinki (GSH)
-//       </h1>
-//       <h3 className={heroStyles.pageHeadingSecondary}>
-//         is a network of young people driving
-//         <br /> dialogue, action and change.
-//       </h3>
-//       <a  className={heroStyles.joinBtn} target="_blank" href="https://google.com">Join now!</a>
-//     </div>
-//     </div>
-
-//   )
-// }
-
-// export default Hero
