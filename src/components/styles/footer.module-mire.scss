@@ -19,17 +19,15 @@
   margin: 0 auto;
 
   background-color: $deepBlueBase;
-  // margin-bottom: -4rem;
   display: grid;
 
-  // grid-template-columns: 1fr 1fr;
-  // grid-template-rows: 2fr 1fr;
-  // grid-template-areas: 'box1 box2';
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  // grid-template-areas: 'box1 box2';
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+    'box1 box2'
+    'box3 box3';
   align-items: center;
-  // padding-top: 20px;
+  padding-top: 20px;
 }
 /*****
   FORM
@@ -37,7 +35,7 @@
 .ContactUsFormContainer {
   //contact us + form
   // background-color: $deepBlueBase;
-  // grid-area: box1;
+  grid-area: box1;
   border-right: solid $sendButton;
   display: flex;
   flex-direction: column;
@@ -45,15 +43,17 @@
   // padding: 2rem;
 
   .ContactUsText {
-    color: $white;
+    border: 1px solid red;
+    // background: #043770;
+    // background: $deepBlueBase;
+    color: white;
     font-size: 2.2rem;
-    font-size: calc(4.1vw + 0.6rem);
-    margin-bottom: 2rem;
+    padding-bottom: 20px;
   }
 
   /*Form container: email+msg+button*/
   .formContainer {
-    background: $white;
+    background: white;
     border-radius: 20px;
     padding: 35px;
 
@@ -137,7 +137,7 @@
 
 .socialMediaContainer {
   align-items: center;
-  // grid-area: box2; //main footer grid position
+  grid-area: box2; //main footer grid position
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -149,10 +149,9 @@
 }
 
 .socialMediaText {
-  color: $white;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.8rem;
   grid-row: 1;
-  margin-bottom: 1rem;
 }
 
 .allSocialIconsContainer {
@@ -175,9 +174,8 @@
 //BOX3 of main FOOTER GRID (we have 2 sub-boxes inside count and ownedDeveloped)
 
 .GScountAndOwnDevContainer {
-  // grid-area: box3; //position in the main footer grid
-  // width: 100%;
-
+  grid-area: box3; //position in the main footer grid
+  width: 100%;
   // border: black solid 10px;
 }
 /* Counter*/
@@ -190,19 +188,19 @@
 
 /*Text decoration in count*/
 .GlobalShapersCountText {
-  color: $white;
+  color: white;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .GlobalShapersCountText2 {
-  color: $white;
+  color: white;
   font-size: 0.9rem;
   font-style: italic;
 }
 
 .GlobalShapersCountNumber {
-  color: $white;
+  color: white;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -210,45 +208,36 @@
   Credits and rights BOX (ownedAndDevelopedContainer)
   *******/
 .ownedAndDevelopedContainer {
-  background-color: $boxShadow;
+  background-color: #b9dff8;
   display: flex; //inside text
   flex-direction: column; //inside text in 2 columns
   align-items: center;
-  padding: 1.5rem 0px; //text inside
+  padding: 20px 0px; //text inside
+  width: 100%;
 }
 
 /*text decoration*/
 .ownedText {
-  color: $deepBlueBase;
+  color: #043770;
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
 }
 
 .creditsText {
-  color: $deepBlueBase;
-  font-size: 0.8rem;
+  color: #043770;
+  font-size: 0.7rem;
 }
 
 /*MEDIA QUERRY*/
 @media only screen and (max-width: 900px) {
-  // .footerContainer {
-  //   display: flex;
-  //   flex-direction: column;
-  //   width: 100%;
-  // }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-  // .container {
-  //   grid-template-areas: 'box1 box1
-  //   box2 box2';
-  // }
   .ContactUsFormContainer {
     border-right: none;
-
-    .ContactUsText {
-      text-align: center;
-      padding-top: 2rem;
-    }
   }
 
   .GlobalShapersCountContainer {
@@ -257,27 +246,24 @@
   .allSocialIconsContainer {
     display: flex;
     flex-direction: row !important;
+    // flex-flow: row nowrap !important;
     justify-content: space-around;
   }
 }
 
+// I need media for bigger od 900 px to get rid of blue line or in code with sulaymon
+
 /* 600 px-900px*/
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-  // .footerSection {
-  //   display: flex;
-  //   flex-direction: column;
-  //   width: 100%;
-  // }
-
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .ContactUsFormContainer {
     border-right: none;
-    padding: 0;
-    width: 100%;
   }
 
   .socialMediaContainer {
@@ -293,20 +279,12 @@
   .allSocialIconsContainer {
     display: flex;
     flex-direction: row;
+
     justify-content: space-around;
-
-    p {
-      width: 80px;
-    }
   }
 
-  .socialIconsImg {
-    img {
-      width: 65%;
-    }
-  }
   .socialMediaText {
-    color: $white;
+    color: white;
     font-size: 1.8rem;
   }
 
@@ -315,42 +293,36 @@
     padding-right: 5px;
   }
   .GlobalShapersCountText {
-    color: $white;
+    color: white;
     font-size: 1 rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
-    color: $white;
+    color: white;
     font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
-    color: $white;
+    color: white;
     font-size: 1 rem;
     font-weight: bold;
   }
 }
 /* max 600 px*/
 @media only screen and (max-width: 600px) {
-  // .footerSection {
-  //   display: flex;
-  //   flex-direction: column;
-  //   // width: 100%;
-  // }
-
-  // .container {
-  //   gap: 0;
-  // }
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+  }
 
   .ContactUsFormContainer {
     border-right: none;
-    padding: 0;
-    max-width: 100%;
   }
 
   .formContainer {
-    background: $white;
+    background: white;
     border-radius: 20px;
     padding: 10px;
   }
@@ -369,7 +341,7 @@
   }
 
   .socialMediaText {
-    color: $white;
+    color: white;
     font-size: 1.5rem;
     padding-bottom: 3px;
   }
@@ -381,18 +353,18 @@
   }
 
   .GlobalShapersCountText {
-    color: $white;
+    color: white;
     font-size: 1 rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
-    color: $white;
+    color: white;
     font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
-    color: $white;
+    color: white;
     font-size: 1 rem;
     font-weight: bold;
   }
@@ -411,20 +383,18 @@
     width: 95%;
     display: flex;
     flex-direction: column;
-    padding: 0;
-    width: 100%;
+    // background: red;
+    padding: 0.8rem;
 
     .formContainer {
-      background: $white;
+      background: white;
       border-radius: 20px;
       display: flex;
       flex-direction: column;
       padding: 1.2rem;
 
-      .nameBox,
       .emailBox {
         padding-bottom: 30px;
-        .nameText,
         .emailText {
           flex-direction: column;
           align-items: flex-start;
@@ -432,7 +402,6 @@
             padding-bottom: 0.7rem;
             font-weight: 500;
           }
-          .nameInput,
           .emailInput {
             margin-left: 0px;
             width: 100%;
@@ -448,36 +417,21 @@
     }
   }
 
-  .socialMediaContainer {
-    padding: 0;
-    max-width: 100%;
-  }
-
   .allSocialIconsContainer {
     display: flex;
     flex-direction: row;
-    // flex-flow: column;
+    flex-flow: column;
     justify-content: space-around;
-
-    p {
-      // padding: 0;
-      // margin: 0;
-      width: 50px;
-      // a {
-      //   font-size: 20px;
-      //   width: 10px;
-      // }
-    }
   }
 
   .socialMediaText {
-    color: $white;
+    color: white;
     font-size: 1.2rem;
   }
 
   .socialIconsImg {
     .img {
-      width: 45%;
+      width: 85%;
     }
   }
 
@@ -488,37 +442,19 @@
   }
   .GlobalShapersCountText {
     padding-right: 2px;
-    color: $white;
+    color: white;
     font-size: 1rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
-    color: $white;
+    color: white;
     font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
-    color: $white;
+    color: white;
     font-size: 1rem;
     font-weight: bold;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-
-  .ContactUsFormContainer {
-    padding: 0;
-    width: 100%;
-  }
-
-  .ownedAndDevelopedContainer {
-    padding: 0.4rem;
-    .creditsText {
-      text-align: center;
-    }
   }
 }
