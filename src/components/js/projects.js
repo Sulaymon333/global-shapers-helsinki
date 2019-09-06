@@ -5,7 +5,7 @@ import projectLocation from '../../assets/icons/Location.svg'
 
 import projectsStyles from '../styles/projects.module.scss'
 
-const Projects = () => {
+const Projects = ({ projectPage }) => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulProjects(sort: { fields: publishedDate, order: DESC }) {
@@ -32,7 +32,12 @@ const Projects = () => {
   return (
     <section className={projectsStyles.projectsSection} id="projects">
       <div className={projectsStyles.container}>
-        <h1 className={projectsStyles.sectionTitle}>GSH Projects</h1>
+        <h1
+          className={`${projectsStyles.sectionTitle} ${projectPage &&
+            projectsStyles.container}`}
+        >
+          GSH Projects
+        </h1>
         <div className={projectsStyles.projectCards}>
           {edges.map(edge => {
             return (

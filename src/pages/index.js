@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 
 import Layout from '../components/js/layout'
 import Head from '../components/js/head'
@@ -29,15 +28,3 @@ const Index = ({ data }) => {
 }
 
 export default Index
-
-// export const query = graphql`
-//   query {
-//     allContentfulMembers {
-//       edges {
-//         node {
-//           title
-//         }
-//       }
-//     }
-//   }
-// `

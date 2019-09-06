@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <>
       <div className={heroStyles.heroSection}>
-        <div className={heroStyles.heroDiv}>
+        <div className={heroStyles.brandInfoContainer}>
           <h1 className={heroStyles.pageHeadingPrimary}>
             Global Shapers Helsinki (GSH)
           </h1>
@@ -29,7 +29,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className={heroStyles.bodyContainer} id="about">
+      <div className={heroStyles.container} id="about">
         <h1 className={heroStyles.bodyH1}>Who we are?</h1>
         <p className={heroStyles.bodyPara}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque hic
@@ -45,7 +45,7 @@ const Hero = () => {
               src={team}
               alt="team icon"
             />
-            <p className={heroStyles.bodyIconText}>20 Shapers</p>
+            <p className={heroStyles.bodyIconText}>28 Shapers</p>
           </div>
           <div className={heroStyles.bodyIconWrapper}>
             <img
@@ -61,7 +61,7 @@ const Hero = () => {
               src={project}
               alt="Project icon"
             />
-            <p className={heroStyles.bodyIconText}>10 Projects completed</p>
+            <p className={heroStyles.bodyIconText}>5 Projects completed</p>
           </div>
         </div>
       </div>

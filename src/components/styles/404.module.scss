@@ -1,0 +1,32 @@
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
+  align-items: center;
+  justify-content: flex-start;
+
+  .pageTitle {
+    font-size: calc(3.1vw + 0.6rem);
+    margin-top: 4.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+  }
+
+  .pageDescription {
+    font-size: calc(0.9vw + 0.8rem);
+    margin-bottom: 2rem;
+  }
+
+  .homeButton {
+    text-decoration: none;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: $deepBlueBase;
+    color: $white;
+    border-radius: 2rem;
+    font-size: calc(0.8vw + 0.6rem);
+  }
+}

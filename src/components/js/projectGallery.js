@@ -7,12 +7,24 @@ const ProjectGallery = ({ id, projectImages }) => {
     <div className={projectGalleryStyles.projectGalleryImages}>
       {projectImages.map(projectImage => {
         return (
-          <img
+          <picture
             key={id}
             className={projectGalleryStyles.projectGalleryImage}
-            src={projectImage.file.url}
-            alt="Project image"
-          />
+          >
+            <source
+              key={id}
+              className={projectGalleryStyles.projectGalleryImage}
+              srcset={`${projectImage.file.url}?w=800&h=300&fm=webp`}
+              type="image/webp"
+            />
+            <img
+              key={id}
+              className={projectGalleryStyles.projectGalleryImage}
+              src={`${projectImage.file.url}?w=800&h=300`}
+              role="presentation"
+              alt="Project image"
+            />
+          </picture>
         )
       })}
     </div>

@@ -11,13 +11,26 @@
       text-align: center;
       font-weight: 300;
       font-size: 3.125rem;
-      margin-bottom: 3%;
+      font-size: calc(4.1vw + 0.6rem);
+      font-weight: 300;
+      margin-bottom: 3rem;
     }
+    .container {
+      margin: 0 auto;
+      width: $containerWidth;
+      max-width: $containerMaxWidth;
+      text-align: left;
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+
     .projectCards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-      grid-gap: 5rem;
-      justify-items: center;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      // grid-gap: 5rem 10rem;
+      // justify-items: center;
+      // justify-items: center;
+      gap: 5rem;
 
       > * {
         text-decoration: none;
@@ -74,11 +87,12 @@
     }
   }
 }
-@media only screen and (max-width: 380px) {
+
+@media only screen and (max-width: 755px) {
   .projectsSection {
-    .projectCards {
-      .projectCard {
-        max-width: 90%;
+    .container {
+      .projectCards {
+        justify-content: center;
       }
     }
   }

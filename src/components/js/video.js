@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-
-import videoBackground from '../../assets/video-thumbnail.png'
 
 import videoStyles from '../styles/video.module.scss'
 
@@ -24,7 +21,7 @@ const Video = props => {
         ...videoSettings,
         play: 1,
       })
-    }, 500)
+    }, 1000)
   }
   const { title, width, height, frameBorder, allowFullScreen } = videoSettings
   return (
@@ -43,7 +40,5 @@ const Video = props => {
     </div>
   )
 }
-
-Video.propTypes = {}
 
 export default Video
