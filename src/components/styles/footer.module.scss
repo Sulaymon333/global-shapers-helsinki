@@ -1,14 +1,5 @@
 .footerSection {
   background-color: $deepBlueBase;
-  // display: grid;
-  // border-top: $boxShadow solid 10px;
-  // grid-template-columns: 1fr 1fr;
-  // grid-template-rows: 3fr 1fr;
-  // grid-template-areas:
-  //   'box1 box2'
-  //   'box3 box3';
-  // align-items: center;
-  // padding-top: 20px;
   width: 100%;
   border-top: $boxShadow solid 9px;
 }
@@ -17,32 +8,19 @@
   width: $containerWidth;
   max-width: $containerMaxWidth;
   margin: 0 auto;
-
+  margin-top: 1.5rem;
   background-color: $deepBlueBase;
-  // margin-bottom: -4rem;
   display: grid;
-
-  // grid-template-columns: 1fr 1fr;
-  // grid-template-rows: 2fr 1fr;
-  // grid-template-areas: 'box1 box2';
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  // grid-template-areas: 'box1 box2';
   gap: 1rem;
   align-items: center;
-  // padding-top: 20px;
 }
-/*****
-  FORM
-  *******/
+/* FORM */
 .ContactUsFormContainer {
-  //contact us + form
-  // background-color: $deepBlueBase;
-  // grid-area: box1;
   border-right: solid $sendButton;
   display: flex;
   flex-direction: column;
   padding: 2rem 4rem 2rem 0;
-  // padding: 2rem;
 
   .ContactUsText {
     color: $white;
@@ -51,13 +29,13 @@
     margin-bottom: 2rem;
   }
 
-  /*Form container: email+msg+button*/
+  /* Form container: email+msg+button */
   .formContainer {
     background: $white;
     border-radius: 20px;
     padding: 35px;
 
-    /*Email*/
+    /* Email */
     .nameBox,
     .emailBox {
       padding-bottom: 20px;
@@ -85,7 +63,7 @@
       }
     }
 
-    /*Msg*/
+    /* Msg */
     .msgBox {
       padding-bottom: 20px;
     }
@@ -110,7 +88,7 @@
       outline: 0;
     }
 
-    /*Send button*/
+    /* Send button */
     .buttonBox {
       display: flex;
       justify-content: flex-end;
@@ -131,13 +109,10 @@
   }
 }
 
-/*****
-  SOCIAL MEDIA BOX
-  *******/
+/* SOCIAL MEDIA BOX */
 
 .socialMediaContainer {
   align-items: center;
-  // grid-area: box2; //main footer grid position
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -151,7 +126,6 @@
 .socialMediaText {
   color: $white;
   font-size: 1.5rem;
-  grid-row: 1;
   margin-bottom: 1rem;
 }
 
@@ -160,35 +134,23 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  grid-row: 2;
   padding: 10px 10px;
 }
 .socialIconsImg {
   text-align: center;
   color: black;
-  height: auto;
-  width: 100%;
   padding-right: 10px;
   padding-left: 10px;
 }
 
-//BOX3 of main FOOTER GRID (we have 2 sub-boxes inside count and ownedDeveloped)
-
-.GScountAndOwnDevContainer {
-  // grid-area: box3; //position in the main footer grid
-  // width: 100%;
-
-  // border: black solid 10px;
-}
 /* Counter*/
 .GlobalShapersCountContainer {
-  // border-top: 1px solid $boxShadow;
   text-align: center;
   padding: 10px 10px 10px 10px; //text inside
   padding: 1.5rem 0;
 }
 
-/*Text decoration in count*/
+/* Text decoration in count */
 .GlobalShapersCountText {
   color: $white;
   font-size: 1rem;
@@ -206,9 +168,7 @@
   font-size: 1rem;
   font-weight: 700;
 }
-/*****
-  Credits and rights BOX (ownedAndDevelopedContainer)
-  *******/
+/* Credits and rights BOX (ownedAndDevelopedContainer) */
 .ownedAndDevelopedContainer {
   background-color: $boxShadow;
   display: flex; //inside text
@@ -217,7 +177,7 @@
   padding: 1.5rem 0px; //text inside
 }
 
-/*text decoration*/
+/* text decoration */
 .ownedText {
   color: $deepBlueBase;
   font-size: 1.2rem;
@@ -230,18 +190,12 @@
   font-size: 0.8rem;
 }
 
-/*MEDIA QUERRY*/
+/* MEDIA QUERY */
 @media only screen and (max-width: 900px) {
-  // .footerContainer {
-  //   display: flex;
-  //   flex-direction: column;
-  //   width: 100%;
-  // }
+  .container {
+    margin-bottom: 1.5rem;
+  }
 
-  // .container {
-  //   grid-template-areas: 'box1 box1
-  //   box2 box2';
-  // }
   .ContactUsFormContainer {
     border-right: none;
 
@@ -251,6 +205,9 @@
     }
   }
 
+  .socialMediaText {
+    font-size: 1.4rem !important;
+  }
   .GlobalShapersCountContainer {
     border-top: 1px solid $boxShadow;
   }
@@ -261,15 +218,8 @@
   }
 }
 
-/* 600 px-900px*/
-
+/* 600 px-900px */
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-  // .footerSection {
-  //   display: flex;
-  //   flex-direction: column;
-  //   width: 100%;
-  // }
-
   .container {
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   }
@@ -333,16 +283,6 @@
 }
 /* max 600 px*/
 @media only screen and (max-width: 600px) {
-  // .footerSection {
-  //   display: flex;
-  //   flex-direction: column;
-  //   // width: 100%;
-  // }
-
-  // .container {
-  //   gap: 0;
-  // }
-
   .ContactUsFormContainer {
     border-right: none;
     padding: 0;
@@ -398,14 +338,7 @@
   }
 }
 
-//for 420 and smaller I want email text and box to go to seperate rows
 @media only screen and (max-width: 420px) {
-  .footerSection {
-    display: flex;
-    flex-direction: column;
-    // width: 100%;
-  }
-
   .ContactUsFormContainer {
     border-right: none;
     width: 95%;
@@ -413,6 +346,7 @@
     flex-direction: column;
     padding: 0;
     width: 100%;
+    margin-bottom: 2rem;
 
     .formContainer {
       background: $white;
@@ -454,30 +388,20 @@
   }
 
   .allSocialIconsContainer {
-    display: flex;
-    flex-direction: row;
-    // flex-flow: column;
-    justify-content: space-around;
-
     p {
-      // padding: 0;
-      // margin: 0;
       width: 50px;
-      // a {
-      //   font-size: 20px;
-      //   width: 10px;
-      // }
     }
   }
 
   .socialMediaText {
     color: $white;
     font-size: 1.2rem;
+    margin-bottom: 0.15rem;
   }
 
   .socialIconsImg {
     .img {
-      width: 45%;
+      width: 60%;
     }
   }
 
@@ -489,18 +413,18 @@
   .GlobalShapersCountText {
     padding-right: 2px;
     color: $white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
     color: $white;
-    font-size: 1 rem;
+    font-size: 0.8rem;
   }
 
   .GlobalShapersCountNumber {
     color: $white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
   }
 }
@@ -508,6 +432,7 @@
 @media only screen and (max-width: 320px) {
   .container {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 0;
   }
 
   .ContactUsFormContainer {
@@ -515,7 +440,17 @@
     width: 100%;
   }
 
+  .socialMediaText {
+    text-align: center;
+    font-size: 1rem !important;
+  }
+
   .ownedAndDevelopedContainer {
+    .ownedText {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
     padding: 0.4rem;
     .creditsText {
       text-align: center;
