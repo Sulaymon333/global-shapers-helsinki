@@ -1,5 +1,14 @@
 .footerSection {
   background-color: $deepBlueBase;
+  // display: grid;
+  // border-top: $boxShadow solid 10px;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 3fr 1fr;
+  // grid-template-areas:
+  //   'box1 box2'
+  //   'box3 box3';
+  // align-items: center;
+  // padding-top: 20px;
   width: 100%;
   border-top: $boxShadow solid 9px;
 }
@@ -8,34 +17,47 @@
   width: $containerWidth;
   max-width: $containerMaxWidth;
   margin: 0 auto;
-  margin-top: 1.5rem;
+
   background-color: $deepBlueBase;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1rem;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+    'box1 box2'
+    'box3 box3';
   align-items: center;
+  padding-top: 20px;
 }
-/* FORM */
+/*****
+  FORM
+  *******/
 .ContactUsFormContainer {
+  //contact us + form
+  // background-color: $deepBlueBase;
+  grid-area: box1;
   border-right: solid $sendButton;
   display: flex;
   flex-direction: column;
   padding: 2rem 4rem 2rem 0;
+  // padding: 2rem;
 
   .ContactUsText {
-    color: $white;
+    border: 1px solid red;
+    // background: #043770;
+    // background: $deepBlueBase;
+    color: white;
     font-size: 2.2rem;
-    font-size: calc(4.1vw + 0.6rem);
-    margin-bottom: 2rem;
+    padding-bottom: 20px;
   }
 
-  /* Form container: email+msg+button */
+  /*Form container: email+msg+button*/
   .formContainer {
-    background: $white;
+    background: white;
     border-radius: 20px;
     padding: 35px;
 
-    /* Email */
+    /*Email*/
     .nameBox,
     .emailBox {
       padding-bottom: 20px;
@@ -63,7 +85,7 @@
       }
     }
 
-    /* Msg */
+    /*Msg*/
     .msgBox {
       padding-bottom: 20px;
     }
@@ -88,7 +110,7 @@
       outline: 0;
     }
 
-    /* Send button */
+    /*Send button*/
     .buttonBox {
       display: flex;
       justify-content: flex-end;
@@ -109,10 +131,13 @@
   }
 }
 
-/* SOCIAL MEDIA BOX */
+/*****
+  SOCIAL MEDIA BOX
+  *******/
 
 .socialMediaContainer {
   align-items: center;
+  grid-area: box2; //main footer grid position
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -124,9 +149,9 @@
 }
 
 .socialMediaText {
-  color: $white;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.8rem;
+  grid-row: 1;
 }
 
 .allSocialIconsContainer {
@@ -134,100 +159,111 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  grid-row: 2;
   padding: 10px 10px;
 }
 .socialIconsImg {
   text-align: center;
   color: black;
+  height: auto;
+  width: 100%;
   padding-right: 10px;
   padding-left: 10px;
 }
 
+//BOX3 of main FOOTER GRID (we have 2 sub-boxes inside count and ownedDeveloped)
+
+.GScountAndOwnDevContainer {
+  grid-area: box3; //position in the main footer grid
+  width: 100%;
+  // border: black solid 10px;
+}
 /* Counter*/
 .GlobalShapersCountContainer {
+  // border-top: 1px solid $boxShadow;
   text-align: center;
   padding: 10px 10px 10px 10px; //text inside
   padding: 1.5rem 0;
 }
 
-/* Text decoration in count */
+/*Text decoration in count*/
 .GlobalShapersCountText {
-  color: $white;
+  color: white;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .GlobalShapersCountText2 {
-  color: $white;
+  color: white;
   font-size: 0.9rem;
   font-style: italic;
 }
 
 .GlobalShapersCountNumber {
-  color: $white;
+  color: white;
   font-size: 1rem;
   font-weight: 700;
 }
-/* Credits and rights BOX (ownedAndDevelopedContainer) */
+/*****
+  Credits and rights BOX (ownedAndDevelopedContainer)
+  *******/
 .ownedAndDevelopedContainer {
-  background-color: $boxShadow;
+  background-color: #b9dff8;
   display: flex; //inside text
   flex-direction: column; //inside text in 2 columns
   align-items: center;
-  padding: 1.5rem 0px; //text inside
+  padding: 20px 0px; //text inside
+  width: 100%;
 }
 
-/* text decoration */
+/*text decoration*/
 .ownedText {
-  color: $deepBlueBase;
+  color: #043770;
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
 }
 
 .creditsText {
-  color: $deepBlueBase;
-  font-size: 0.8rem;
+  color: #043770;
+  font-size: 0.7rem;
 }
 
-/* MEDIA QUERY */
+/*MEDIA QUERRY*/
 @media only screen and (max-width: 900px) {
-  .container {
-    margin-bottom: 1.5rem;
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .ContactUsFormContainer {
     border-right: none;
-
-    .ContactUsText {
-      text-align: center;
-      padding-top: 2rem;
-    }
   }
 
-  .socialMediaText {
-    font-size: 1.4rem !important;
-  }
   .GlobalShapersCountContainer {
     border-top: 1px solid $boxShadow;
   }
   .allSocialIconsContainer {
     display: flex;
     flex-direction: row !important;
+    // flex-flow: row nowrap !important;
     justify-content: space-around;
   }
 }
 
-/* 600 px-900px */
+// I need media for bigger od 900 px to get rid of blue line or in code with sulaymon
+
+/* 600 px-900px*/
+
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .ContactUsFormContainer {
     border-right: none;
-    padding: 0;
-    width: 100%;
   }
 
   .socialMediaContainer {
@@ -243,20 +279,12 @@
   .allSocialIconsContainer {
     display: flex;
     flex-direction: row;
+
     justify-content: space-around;
-
-    p {
-      width: 80px;
-    }
   }
 
-  .socialIconsImg {
-    img {
-      width: 65%;
-    }
-  }
   .socialMediaText {
-    color: $white;
+    color: white;
     font-size: 1.8rem;
   }
 
@@ -265,32 +293,36 @@
     padding-right: 5px;
   }
   .GlobalShapersCountText {
-    color: $white;
+    color: white;
     font-size: 1 rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
-    color: $white;
+    color: white;
     font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
-    color: $white;
+    color: white;
     font-size: 1 rem;
     font-weight: bold;
   }
 }
 /* max 600 px*/
 @media only screen and (max-width: 600px) {
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+  }
+
   .ContactUsFormContainer {
     border-right: none;
-    padding: 0;
-    max-width: 100%;
   }
 
   .formContainer {
-    background: $white;
+    background: white;
     border-radius: 20px;
     padding: 10px;
   }
@@ -309,7 +341,7 @@
   }
 
   .socialMediaText {
-    color: $white;
+    color: white;
     font-size: 1.5rem;
     padding-bottom: 3px;
   }
@@ -321,44 +353,48 @@
   }
 
   .GlobalShapersCountText {
-    color: $white;
+    color: white;
     font-size: 1 rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
-    color: $white;
+    color: white;
     font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
-    color: $white;
+    color: white;
     font-size: 1 rem;
     font-weight: bold;
   }
 }
 
+//for 420 and smaller I want email text and box to go to seperate rows
 @media only screen and (max-width: 420px) {
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+  }
+
   .ContactUsFormContainer {
     border-right: none;
     width: 95%;
     display: flex;
     flex-direction: column;
-    padding: 0;
-    width: 100%;
-    margin-bottom: 2rem;
+    // background: red;
+    padding: 0.8rem;
 
     .formContainer {
-      background: $white;
+      background: white;
       border-radius: 20px;
       display: flex;
       flex-direction: column;
       padding: 1.2rem;
 
-      .nameBox,
       .emailBox {
         padding-bottom: 30px;
-        .nameText,
         .emailText {
           flex-direction: column;
           align-items: flex-start;
@@ -366,7 +402,6 @@
             padding-bottom: 0.7rem;
             font-weight: 500;
           }
-          .nameInput,
           .emailInput {
             margin-left: 0px;
             width: 100%;
@@ -382,26 +417,21 @@
     }
   }
 
-  .socialMediaContainer {
-    padding: 0;
-    max-width: 100%;
-  }
-
   .allSocialIconsContainer {
-    p {
-      width: 50px;
-    }
+    display: flex;
+    flex-direction: row;
+    flex-flow: column;
+    justify-content: space-around;
   }
 
   .socialMediaText {
-    color: $white;
+    color: white;
     font-size: 1.2rem;
-    margin-bottom: 0.15rem;
   }
 
   .socialIconsImg {
     .img {
-      width: 60%;
+      width: 85%;
     }
   }
 
@@ -412,48 +442,19 @@
   }
   .GlobalShapersCountText {
     padding-right: 2px;
-    color: $white;
-    font-size: 0.8rem;
+    color: white;
+    font-size: 1rem;
     font-weight: bold;
   }
 
   .GlobalShapersCountText2 {
-    color: $white;
-    font-size: 0.8rem;
+    color: white;
+    font-size: 1 rem;
   }
 
   .GlobalShapersCountNumber {
-    color: $white;
-    font-size: 0.8rem;
+    color: white;
+    font-size: 1rem;
     font-weight: bold;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    margin-top: 0;
-  }
-
-  .ContactUsFormContainer {
-    padding: 0;
-    width: 100%;
-  }
-
-  .socialMediaText {
-    text-align: center;
-    font-size: 1rem !important;
-  }
-
-  .ownedAndDevelopedContainer {
-    .ownedText {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    padding: 0.4rem;
-    .creditsText {
-      text-align: center;
-    }
   }
 }
