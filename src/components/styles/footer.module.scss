@@ -174,15 +174,15 @@
   display: flex; //inside text
   flex-direction: column; //inside text in 2 columns
   align-items: center;
-  padding: 1.5rem 0px; //text inside
+  padding: 0.8rem 0px; //text inside
 }
 
 /* text decoration */
 .ownedText {
   color: $deepBlueBase;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
 }
 
 .creditsText {
@@ -279,6 +279,16 @@
     color: $white;
     font-size: 1 rem;
     font-weight: bold;
+  }
+
+  .ownedAndDevelopedContainer {
+    .ownedText {
+      font-size: 0.9rem;
+    }
+
+    .creditsText {
+      font-size: 0.7rem;
+    }
   }
 }
 /* max 600 px*/
@@ -406,9 +416,8 @@
   }
 
   .GlobalShapersCountContainer {
-    padding-left: 5px;
-    padding-right: 5px;
     text-align: center;
+    padding: 13px 5px;
   }
   .GlobalShapersCountText {
     padding-right: 2px;
@@ -426,6 +435,13 @@
     color: $white;
     font-size: 0.8rem;
     font-weight: bold;
+  }
+
+  .ownedAndDevelopedContainer {
+    .ownedText {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
   }
 }
 
@@ -446,12 +462,12 @@
   }
 
   .ownedAndDevelopedContainer {
+    padding: 0.4rem;
+
     .ownedText {
-      font-size: 1rem;
+      font-size: 0.7rem;
       margin-bottom: 0.4rem;
     }
-
-    padding: 0.4rem;
     .creditsText {
       text-align: center;
     }
