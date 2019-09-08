@@ -11,7 +11,7 @@ const Success = () => {
     <>
       <Header />
       <Head title="404 Page" />
-      <div className={notFoundStyles.container}>
+      <div className={notFoundStyles.container} style={{ marginTop: '88px' }}>
         <h1 className={notFoundStyles.pageTitle}>Thank you for your time.</h1>
         <p className={notFoundStyles.pageDescription}>
           We will keep in touch with you soon.

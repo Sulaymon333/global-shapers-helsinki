@@ -11,7 +11,7 @@ const NotFoundPage = () => {
     <>
       <Header />
       <Head title="404 Page" />
-      <div className={notFoundStyles.container}>
+      <div className={notFoundStyles.container} style={{ marginTop: '88px' }}>
         <h1 className={notFoundStyles.pageTitle}>Not Found</h1>
         <p className={notFoundStyles.pageDescription}>
           The requested page was not found.
