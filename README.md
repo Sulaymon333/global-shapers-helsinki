@@ -6,8 +6,8 @@ Happy Coding 😀😍
 
 ## Demo
 
-- [Master branch]()
-- [Develop branch](https://shapershel.org/)
+- [Master branch](https://shapershel.org/)
+- [Develop branch](https://shapershel-develop.netlify.com/)
 
 ## Technologies and tools used
 

@@ -16,6 +16,12 @@ const Header = () => {
         </Link>
 
         <nav className={headerStyles.navigation}>
+          <button className={headerStyles.hamburger}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+
           <ul className={headerStyles.navList}>
             <li className={headerStyles.navItem}>
               <a className={headerStyles.navLink} href="#about">
