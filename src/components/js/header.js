@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 import logo from '../../assets/gsh-logo.svg'
@@ -6,6 +6,15 @@ import logo from '../../assets/gsh-logo.svg'
 import headerStyles from '../styles/header.module.scss'
 
 const Header = () => {
+  const [toggleMenuBtn, setToggleMenuBtn] = useState(false)
+
+  const handleMenuBtn = () => {
+    toggleMenuBtn ? setToggleMenuBtn(false) : setToggleMenuBtn(true)
+  }
+
+  console.log(toggleMenuBtn)
+
+  useState
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.container}>
@@ -16,20 +25,31 @@ const Header = () => {
         </Link>
 
         <nav className={headerStyles.navigation}>
-          <button className={headerStyles.hamburger}>
+          <button className={headerStyles.hamburger} onClick={handleMenuBtn}>
             <div></div>
             <div></div>
             <div></div>
           </button>
 
-          <ul className={headerStyles.navList}>
-            <li className={headerStyles.navItem}>
+          <ul
+            className={`${headerStyles.navList} ${toggleMenuBtn &&
+              headerStyles.isOpen}`}
+          >
+            <li
+              className={`${headerStyles.navItem} ${toggleMenuBtn &&
+                headerStyles.fade}`}
+              onClick={handleMenuBtn}
+            >
               <a className={headerStyles.navLink} href="#about">
                 About
               </a>
             </li>
 
-            <li className={headerStyles.navItem}>
+            <li
+              className={`${headerStyles.navItem} ${toggleMenuBtn &&
+                headerStyles.fade}`}
+              onClick={handleMenuBtn}
+            >
               <Link
                 className={headerStyles.navLink}
                 activeClassName={headerStyles.activeNavItem}
@@ -39,12 +59,21 @@ const Header = () => {
               </Link>
             </li>
 
-            <li className={headerStyles.navItem}>
+            <li
+              className={`${headerStyles.navItem} ${toggleMenuBtn &&
+                headerStyles.fade}`}
+              onClick={handleMenuBtn}
+            >
               <a className={headerStyles.navLink} href="#join">
                 Join
               </a>
             </li>
           </ul>
+          <div
+            className={`${headerStyles.overlay} ${toggleMenuBtn ||
+              headerStyles.removeOverlay}`}
+            onClick={handleMenuBtn}
+          ></div>
         </nav>
       </div>
     </header>
