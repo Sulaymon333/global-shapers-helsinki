@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       {/* sticky footer */}
       <div className={layoutStyles.content}>
         <Header />
-        {children}
+        <main>{children}</main>
       </div>
       <Footer />
     </div>

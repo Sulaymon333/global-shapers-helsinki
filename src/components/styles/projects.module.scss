@@ -92,7 +92,9 @@
   .projectsSection {
     .container {
       .projectCards {
-        justify-content: center;
+        .projectCard {
+          width: 100%;
+        }
       }
     }
   }

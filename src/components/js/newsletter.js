@@ -9,11 +9,13 @@ const Newsletter = () => {
         <div className={newsletterStyles.text}>Subscribe to Our Newsletter</div>
         <form
           className={newsletterStyles.newsletterForm}
-          name="newsletterForm"
+          name="newsletter-form"
           method="POST"
+          netlify-honeypot="bot-field"
           data-netlify="true"
+          action="/success"
         >
-          <input type="text" placeholder="Your email address" />
+          <input name="email" type="email" placeholder="Your email address" />
           <button type="submit">Send</button>
         </form>
       </div>
