@@ -12,9 +12,6 @@ const Header = () => {
     toggleMenuBtn ? setToggleMenuBtn(false) : setToggleMenuBtn(true)
   }
 
-  console.log(toggleMenuBtn)
-
-  useState
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.container}>

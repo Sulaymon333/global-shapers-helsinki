@@ -4,6 +4,9 @@
     width: $containerWidth;
     max-width: $containerMaxWidth;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     > * {
@@ -15,6 +18,9 @@
       font-weight: 700;
     }
     .newsletterForm {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       input {
         background: #d9eaf5;

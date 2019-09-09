@@ -2,23 +2,21 @@ import React from 'react'
 
 import projectGalleryStyles from '../styles/projectGallery.module.scss'
 
-const ProjectGallery = ({ id, projectImages }) => {
+const ProjectGallery = ({ projectImages }) => {
   return (
     <div className={projectGalleryStyles.projectGalleryImages}>
-      {projectImages.map(projectImage => {
+      {projectImages.map((projectImage, index) => {
         return (
           <picture
-            key={id}
+            key={projectImage.id}
             className={projectGalleryStyles.projectGalleryImage}
           >
             <source
-              key={id}
               className={projectGalleryStyles.projectGalleryImage}
-              srcset={`${projectImage.file.url}?w=800&h=300&fm=webp`}
+              srcSet={`${projectImage.file.url}?w=800&h=300&fm=webp`}
               type="image/webp"
             />
             <img
-              key={id}
               className={projectGalleryStyles.projectGalleryImage}
               src={`${projectImage.file.url}?w=800&h=300`}
               role="presentation"

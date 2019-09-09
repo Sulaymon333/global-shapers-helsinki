@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import videoStyles from '../styles/video.module.scss'
-
 const Video = props => {
   const initialState = {
     title: 'video Image',
@@ -25,9 +23,8 @@ const Video = props => {
   }
   const { title, width, height, frameBorder, allowFullScreen } = videoSettings
   return (
-    <div className={videoStyles.videoBackground}>
+    <div>
       <iframe
-        className={videoStyles.iframe}
         title={title}
         width={width}
         height={height}

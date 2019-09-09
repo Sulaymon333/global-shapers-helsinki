@@ -5,12 +5,12 @@ import ProjectGallery from './projectGallery'
 
 import projectDetailStyles from '../styles/projectDetail.module.scss'
 
-const projectDetail = ({ id, projectDetail, projectImages }) => {
+const projectDetail = ({ projectDetail, projectImages }) => {
   return (
     <section className={projectDetailStyles.projectDetailSection}>
       <div className={projectDetailStyles.container}>
         <ProjectAbout projectDetail={projectDetail} />
-        <ProjectGallery id={id} projectImages={projectImages} />
+        <ProjectGallery projectImages={projectImages} />
       </div>
     </section>
   )

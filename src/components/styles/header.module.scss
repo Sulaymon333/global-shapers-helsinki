@@ -10,6 +10,9 @@
   background: $white;
 
   .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +35,9 @@
       }
 
       .navList {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         list-style-type: none;
         justify-content: center;
@@ -95,6 +101,9 @@
         }
 
         .navList {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
@@ -105,8 +114,11 @@
           position: fixed;
           height: 82vh;
           width: 100%;
-          clip-path: circle(10vh at 90% -20%);
           -webkit-clip-path: circle(10vh at 90% -20%);
+          clip-path: circle(10vh at 90% -20%);
+          -webkit-transition: all 1s ease-out;
+          -moz-transition: all 1s ease-out;
+          -o-transition: all 1s ease-out;
           transition: all 1s ease-out;
           pointer-events: none;
 
@@ -120,14 +132,23 @@
           }
 
           .navItem:nth-child(1) {
+            -webkit-transition: all 0.5s ease 0.2s;
+            -moz-transition: all 0.5s ease 0.2s;
+            -o-transition: all 0.5s ease 0.2s;
             transition: all 0.5s ease 0.2s;
           }
 
           .navItem:nth-child(2) {
+            -webkit-transition: all 0.5s ease 0.4s;
+            -moz-transition: all 0.5s ease 0.4s;
+            -o-transition: all 0.5s ease 0.4s;
             transition: all 0.5s ease 0.4s;
           }
 
           .navItem:nth-child(3) {
+            -webkit-transition: all 0.5s ease 0.6s;
+            -moz-transition: all 0.5s ease 0.6s;
+            -o-transition: all 0.5s ease 0.6s;
             transition: all 0.5s ease 0.6s;
           }
 
@@ -138,8 +159,8 @@
 
         .navList.isOpen {
           z-index: 3;
-          clip-path: circle(87vh at 90% -10%);
           -webkit-clip-path: circle(87vh at 90% -10%);
+          clip-path: circle(87vh at 90% -10%);
           pointer-events: all;
         }
 

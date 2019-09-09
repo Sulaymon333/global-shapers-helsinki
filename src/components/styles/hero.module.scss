@@ -15,6 +15,9 @@
 
 .brandInfoContainer {
   height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -77,6 +80,9 @@
 .bodyIconsSection {
   width: 80vw;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
