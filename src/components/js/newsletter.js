@@ -15,7 +15,9 @@ const Newsletter = () => {
           data-netlify="true"
           action="/success"
         >
-          <input name="email" type="email" placeholder="Your email address" />
+          <div className={newsletterStyles.emailBox}>
+            <input name="email" type="email" placeholder="Your email address" />
+          </div>
           <button type="submit">Send</button>
         </form>
       </div>
