@@ -16,7 +16,7 @@
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "gatsby": "^2.13.83",
     "gatsby-plugin-react-helmet": "^3.1.6",
-    "gatsby-plugin-sass": "^2.1.12",
+    "gatsby-plugin-sass": "^2.1.26",
     "gatsby-source-contentful": "^2.1.29",
     "gatsby-source-instagram": "^0.5.1",
     "node-sass": "^4.12.0",
