@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
-import defaultProfileImage from '../../assets/portraits/placeholder-image.png'
+import defaultProfileImage from '../../assets/placeholder-image.png'
 
 import membersStyles from '../styles/members.module.scss'
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../../assets/gsh-logo.svg'
+import logo from '../../assets/gsh-logo.png'
 
 import headerStyles from '../styles/header.module.scss'
 
