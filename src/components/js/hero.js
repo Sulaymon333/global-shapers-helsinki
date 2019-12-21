@@ -47,10 +47,11 @@ const Hero = () => {
       <div className={heroStyles.container} id="about">
         <h1 className={heroStyles.bodyH1}>Who we are?</h1>
         <p className={heroStyles.bodyPara}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque hic
-          minima omnis dolorem est excepturi cum ipsum eos mollitia
-          necessitatibu consectetur adipisicing elit. Eaque hic minima omnis
-          dolorem est excepturi cum ipsum eos mollitia necessitatibu
+          As a community of young people our mission is to provide an inspiring
+          space for voicing and driving ideas, concerns and initiatives. We are
+          committed to facilitate positive change by sharing and harnessing
+          knowledge and perspectives in order to tackle local and global
+          challenges of our time.
         </p>
         <h1 className={heroStyles.bodyH1}>GSH in numbers</h1>
         <div className={heroStyles.bodyIconsSection}>

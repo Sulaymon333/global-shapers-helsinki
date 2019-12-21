@@ -6,12 +6,12 @@ Happy Coding 😀😍
 
 ## Demo
 
-- [Master branch](https://shapershel.org/)
-- [Develop branch](https://shapershel-develop.netlify.com/)
+- [Master branch]()
+- [Develop branch]()
 
 ## Technologies and tools used
 
-- React
+- React with ESLint
 - Gatsby
 - GraphQL
 - Contentful
@@ -19,21 +19,21 @@ Happy Coding 😀😍
 - GitHub
 
 ## Run locally
+
 **Start development server.**
 
 Navigate into your new site’s directory and start it up.
 
-  ```sh
-  cd global-shapers/
-  gatsby develop
-  ```
+```sh
+cd global-shapers/
+gatsby develop
+```
 
 ## Authors
 
 - Sulaymon Tajudeen (Developer & Designer)
 - Kunjan Ghimire (Developer)
 - Mirela Viitanen (Developer)
-
 
 ## License
 
