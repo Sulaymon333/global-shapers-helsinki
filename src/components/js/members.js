@@ -8,7 +8,7 @@ import membersStyles from '../styles/members.module.scss'
 const Members = ({ title, projectPage }) => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulMembersTest {
+      allContentfulMembers {
         edges {
           node {
             id
