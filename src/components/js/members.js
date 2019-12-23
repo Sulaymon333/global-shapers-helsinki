@@ -25,7 +25,7 @@ const Members = ({ title, projectPage }) => {
       }
     }
   `)
-  const { edges } = data.allContentfulMembersTest
+  const { edges } = data.allContentfulMembers
 
   // sort by profile picture first
 
