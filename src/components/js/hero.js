@@ -10,7 +10,7 @@ import heroStyles from '../styles/hero.module.scss'
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulMembersTest {
+      allContentfulMembers {
         totalCount
       }
       allContentfulProjects {
@@ -19,7 +19,7 @@ const Hero = () => {
     }
   `)
 
-  const { totalCount: totalCountMembers } = data.allContentfulMembersTest
+  const { totalCount: totalCountMembers } = data.allContentfulMembers
   const { totalCount: totalCountProjects } = data.allContentfulProjects
 
   return (
