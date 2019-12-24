@@ -6,8 +6,7 @@ Happy Coding 😀😍
 
 ## Demo
 
-- [Master branch]()
-- [Develop branch]()
+- [Master branch](https://shapershel.netlify.com/)
 
 ## Technologies and tools used
 
@@ -41,4 +40,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-Our special thanks goes to [Integrify](https://github.com/Integrify-Finland), especially our teacher Asabeneh and colleagues.
+Our special thanks goes to Integrify, especially our teacher Asabeneh and colleagues.
