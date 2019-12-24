@@ -1,9 +1,9 @@
 .heroSection {
-  margin-top: 88px; //TODO
-  min-height: calc(100vh - 115px);
+  margin-top: 88px;
+  min-height: calc(100vh - 85px);
   background-image: linear-gradient(
-      rgba(217, 234, 245, 0.7),
-      rgba(139, 194, 228, 0.7)
+      rgba(215, 219, 221, 0.6),
+      rgba(81, 122, 148, 0.69)
     ),
     url('../../assets/hero-bg.jpg');
 
@@ -25,14 +25,15 @@
   max-width: $containerWidth;
   margin: 0 auto;
   position: relative;
-  top: 11vw;
+  top: 13vw;
 }
 
 .pageHeadingPrimary {
   display: block;
   font-size: calc(4.1vw + 0.6rem);
   font-weight: 300;
-  color: $deepBlueBase;
+  width: auto;
+  color: rgb(14, 62, 124);
   font-family: 'Montserrat';
 }
 
