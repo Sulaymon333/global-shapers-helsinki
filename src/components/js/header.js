@@ -50,7 +50,7 @@ const Header = () => {
               <Link
                 className={headerStyles.navLink}
                 activeClassName={headerStyles.activeNavItem}
-                to="/project/super-women-coders"
+                to="/project/super-women-coders-club"
               >
                 Projects
               </Link>
