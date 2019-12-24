@@ -149,7 +149,38 @@ const Footer = () => {
           Global Shapers Helsinki &copy; 2019
         </p>
         <p className={footerStyles.creditsText}>
-          The site was developed by Integrify Web Devlopers
+          The site was developed by{' '}
+          <span>
+            {' '}
+            <a
+              href="https://github.com/sulaymon333"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @Sulaymon,
+            </a>
+          </span>
+          <span>
+            {' '}
+            <a
+              href="https://github.com/ghimirekunji"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @Kunjan
+            </a>
+          </span>{' '}
+          and
+          <span>
+            {' '}
+            <a
+              href="https://github.com/MirelaViit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @Mirela
+            </a>
+          </span>
         </p>
       </div>
     </footer>
